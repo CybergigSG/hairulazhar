@@ -7,6 +7,7 @@
 <meta name="description" content="Hairul Azhar Bin Abu Bakar — Forward-Deployed AI Engineer and founder of KatalockAi, KatalockAi Academy and AIM OS. Agentic AI built, shipped and run in production.">
 <meta property="og:title" content="Hairul Azhar — Forward-Deployed AI Engineer">
 <meta property="og:description" content="KatalockAi workspace, a 523-lesson AI engineering Academy, AIM OS, and real client builds.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <meta property="og:image" content="assets/video/katalock-interior-staging-poster.jpg">
 <style>
 :root{
@@ -44,11 +45,34 @@ svg{display:block}
 .topnav .hire{background:linear-gradient(135deg,#ffb347,#f6851f);color:#0b0f1c;font-weight:700;border-radius:8px;padding:6px 12px;font-size:12.5px;white-space:nowrap}
 
 .brandrow{display:flex;align-items:center;gap:11px}
-.kmark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#232b44,#0b1020);
-  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:16px;
-  border:1px solid rgba(255,255,255,.16);box-shadow:0 6px 20px rgba(0,0,0,.5);flex:none}
-.brandrow .nm{font-weight:800;font-size:18px;letter-spacing:-.01em;color:var(--text)}
-.brandrow .nm .ai{color:var(--saffron)}
+.sig{height:38px;width:auto;display:block}
+@media screen and (prefers-reduced-motion:no-preference){
+  .topnav .sig .sig-name{opacity:0;animation:sigfade .9s ease .1s forwards}
+  .topnav .sig .sig-flourish{stroke-dasharray:520;stroke-dashoffset:520;animation:sigdraw 1.3s ease .6s forwards}
+  .topnav .sig .sig-dot{opacity:0;animation:sigfade .4s ease 1.8s forwards}
+  @keyframes sigfade{to{opacity:1}}
+  @keyframes sigdraw{to{stroke-dashoffset:0}}
+}
+.founder{display:grid;grid-template-columns:1.35fr 1fr;gap:16px;margin-top:18px}
+.letter{padding:24px}
+.letter blockquote{margin:0;font-size:21px;line-height:1.3;font-weight:700;letter-spacing:-.01em;color:#fff}
+.letter blockquote:before{content:"\201C";color:var(--saffron);font-size:46px;line-height:0;vertical-align:-18px;margin-right:4px}
+.letter p{color:#c3cada;font-size:13.5px;margin:14px 0 0}
+.letter p b{color:#fff}
+.letter .signed{display:flex;align-items:center;gap:14px;margin-top:18px;flex-wrap:wrap}
+.letter .signed img{height:52px;width:auto}
+.letter .signed span{font-size:12px;color:var(--muted);line-height:1.4}
+.namecard{padding:20px}
+.namecard .big{font-size:26px;font-weight:800;letter-spacing:-.02em;margin:6px 0 2px}
+.namecard .big i{color:var(--saffron2);font-style:normal}
+.namecard p{color:#c3cada;font-size:13px;margin:8px 0 0}
+.namecard .roots{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.namecard q{display:block;color:#fff;font-size:13.5px;font-style:italic;margin-top:6px;quotes:"\201C" "\201D"}
+.matrix{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.matrix .card{padding:15px}
+.matrix .card .t{font-size:14px}
+.matrix .card p{font-size:12.5px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--saffron2);font-weight:700;margin:26px 0 10px}
 h1{font-size:46px;line-height:1.02;letter-spacing:-.03em;margin:0 0 10px;font-weight:800}
 .grad{color:#ff9a3c}
@@ -271,6 +295,8 @@ footer a{color:var(--muted)}
   html{scroll-behavior:auto}
 }
 @media (max-width:860px){
+  .founder{grid-template-columns:1fr}
+  .matrix{grid-template-columns:1fr 1fr}
   .bands{grid-template-columns:repeat(2,1fr)}
   .deep{grid-template-columns:1fr 1fr}
   .showreel,.sites,.two{grid-template-columns:1fr}
@@ -283,7 +309,9 @@ footer a{color:var(--muted)}
   .topnav .in{padding:10px 16px}
   h1{font-size:34px}
   .hp h3{font-size:28px}
-  .deep,.rtable{grid-template-columns:1fr}
+  .deep,.rtable,.matrix{grid-template-columns:1fr}
+  .letter blockquote{font-size:18px}
+  .sig{height:32px}
   .bands{grid-template-columns:1fr}
   .acad,.panel,.cta{padding:18px}
   .site .view{height:240px}
@@ -304,9 +332,14 @@ footer a{color:var(--muted)}
 
 <nav class="topnav">
   <div class="in">
-    <a class="brandrow" href="#top"><span class="kmark">K</span><span class="nm">Katalock<span class="ai">Ai</span></span></a>
+    <a class="brandrow" href="#top" aria-label="Hairul Azhar, back to top"><svg class="sig" xmlns="http://www.w3.org/2000/svg" viewBox="-9.7 -80.9 474.3 132.7" role="img" aria-label="Hairul Azhar">
+  <defs><linearGradient id="sg" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#ffb347"/><stop offset=".55" stop-color="#f6851f"/><stop offset="1" stop-color="#ff7a59"/></linearGradient></defs>
+  <g class="sig-name" fill="#eaeefb" stroke="#eaeefb" stroke-width="1.1" stroke-linejoin="round"><path d="M101.5 -73.2Q101.5 -68.8 93.2 -61.7Q84.9 -54.6 69.60000000000001 -44.400000000000006Q60.300000000000004 -31.900000000000002 53.85000000000001 -20.5Q47.400000000000006 -9.1 47.400000000000006 -4.7Q47.400000000000006 -0.30000000000000004 49.900000000000006 -0.30000000000000004Q51.7 -0.30000000000000004 54.85 -2.2Q58.0 -4.1000000000000005 60.2 -6.0L62.400000000000006 -7.9Q63.0 -8.6 63.5 -8.6Q64.0 -8.6 64.0 -8.200000000000001Q64.0 -5.6000000000000005 57.6 -1.8000000000000003Q51.2 2.0 48.0 2.0Q41.900000000000006 2.0 41.900000000000006 -2.75Q41.900000000000006 -7.5 46.7 -17.0Q51.5 -26.5 59.1 -37.4Q42.6 -26.700000000000003 34.4 -21.200000000000003Q23.8 -6.7 13.3 3.9500000000000006Q2.8000000000000003 14.600000000000001 -1.4000000000000001 14.600000000000001Q-3.7 14.600000000000001 -3.7 12.9Q-3.7 7.300000000000001 4.85 -0.7999999999999998Q13.4 -8.9 28.6 -19.5Q38.0 -32.9 44.35 -44.95Q50.7 -57.0 50.7 -62.5Q50.7 -68.8 44.400000000000006 -70.2Q39.5 -71.4 34.15 -71.4Q28.8 -71.4 25.65 -71.1Q22.5 -70.8 18.7 -69.95Q14.9 -69.10000000000001 12.55 -67.2Q10.200000000000001 -65.3 10.200000000000001 -62.6Q10.200000000000001 -59.5 15.650000000000002 -57.7Q21.1 -55.900000000000006 27.85 -54.10000000000001Q34.6 -52.300000000000004 36.5 -49.7Q37.300000000000004 -48.800000000000004 37.6 -46.400000000000006Q37.6 -45.7 37.150000000000006 -45.7Q36.7 -45.7 36.300000000000004 -46.400000000000006Q35.4 -48.5 30.55 -50.150000000000006Q25.700000000000003 -51.800000000000004 20.450000000000003 -52.75Q15.200000000000001 -53.7 10.950000000000001 -55.85Q6.7 -58.0 6.7 -61.2Q6.7 -64.4 8.8 -66.75Q10.9 -69.10000000000001 13.75 -70.30000000000001Q16.6 -71.5 21.0 -72.2Q27.6 -73.10000000000001 36.45 -73.10000000000001Q45.300000000000004 -73.10000000000001 50.25 -70.2Q55.2 -67.3 55.2 -62.1Q55.2 -51.0 37.4 -25.5Q42.2 -28.700000000000003 51.0 -34.45Q59.800000000000004 -40.2 62.300000000000004 -41.900000000000006Q72.60000000000001 -55.900000000000006 82.95000000000002 -65.4Q93.30000000000001 -74.9 99.7 -74.9Q101.5 -74.9 101.5 -73.2ZM-0.2 12.3Q2.6 12.3 9.850000000000001 4.45Q17.1 -3.4000000000000004 25.6 -15.200000000000001Q-0.9 3.4000000000000004 -0.9 11.4Q-0.9 12.3 -0.2 12.3ZM97.30000000000001 -72.60000000000001Q94.5 -72.60000000000001 87.9 -66.05000000000001Q81.30000000000001 -59.5 73.3 -49.2Q97.9 -66.0 97.9 -72.0Q97.9 -72.60000000000001 97.30000000000001 -72.60000000000001ZM86.9 -12.0Q86.30000000000001 -12.0 86.30000000000001 -12.45Q86.30000000000001 -12.9 87.0 -13.5Q90.30000000000001 -16.2 90.30000000000001 -18.400000000000002Q90.30000000000001 -19.8 87.80000000000001 -20.0Q83.30000000000001 -19.900000000000002 77.05000000000001 -13.500000000000002Q70.80000000000001 -7.1000000000000005 70.80000000000001 -3.9000000000000004Q70.80000000000001 -2.8000000000000003 72.05000000000001 -2.8000000000000003Q73.30000000000001 -2.8000000000000003 75.4 -4.5Q77.30000000000001 -5.7 82.5 -10.5Q83.7 -11.700000000000001 84.80000000000001 -11.700000000000001Q86.2 -11.700000000000001 86.2 -10.4Q86.2 -9.9 85.9 -9.600000000000001Q85.60000000000001 -9.3 84.80000000000001 -8.350000000000001Q84.0 -7.4 83.4 -6.6000000000000005Q81.60000000000001 -4.0 81.60000000000001 -3.2Q81.60000000000001 -1.2000000000000002 83.2 -1.2000000000000002Q85.30000000000001 -1.2000000000000002 91.10000000000001 -5.050000000000001Q96.9 -8.9 101.70000000000002 -12.8L106.5 -16.6Q107.20000000000002 -17.1 107.80000000000001 -17.1Q108.4 -17.1 108.4 -16.400000000000002V-16.2Q100.70000000000002 -9.700000000000001 92.15 -4.0Q83.60000000000001 1.7000000000000002 80.9 1.7000000000000002Q77.7 1.7000000000000002 77.7 -1.7000000000000002Q77.7 -2.5 78.0 -3.2Q78.30000000000001 -3.9000000000000004 78.30000000000001 -4.2Q78.30000000000001 -4.5 78.10000000000001 -4.6000000000000005Q77.80000000000001 -4.6000000000000005 74.25 -1.9000000000000004Q70.7 0.8 68.05000000000001 0.8Q65.4 0.8 65.4 -2.0000000000000004Q65.4 -4.800000000000001 69.15 -9.55Q72.9 -14.3 79.2 -18.200000000000003Q85.5 -22.1 91.5 -22.1Q92.9 -22.1 93.85000000000001 -21.400000000000002Q94.80000000000001 -20.700000000000003 94.80000000000001 -19.25Q94.80000000000001 -17.8 91.9 -14.9Q89.0 -12.0 86.9 -12.0ZM117.35000000000001 -30.200000000000003Q118.30000000000001 -30.200000000000003 118.85000000000001 -29.6Q119.4 -29.0 119.4 -27.9Q119.4 -26.8 117.9 -25.1Q116.4 -23.400000000000002 115.30000000000001 -23.400000000000002Q114.2 -23.400000000000002 113.7 -24.050000000000004Q113.2 -24.700000000000003 113.2 -25.550000000000004Q113.2 -26.400000000000002 114.80000000000001 -28.300000000000004Q116.4 -30.200000000000003 117.35000000000001 -30.200000000000003ZM125.60000000000001 -16.7Q126.4 -17.2 126.85000000000001 -17.2Q127.30000000000001 -17.2 127.30000000000001 -16.6V-16.3Q127.70000000000002 -16.3 121.95000000000002 -11.9Q116.2 -7.5 109.65 -3.1Q103.10000000000001 1.3 101.4 1.3Q98.5 1.3 98.5 -1.1Q98.5 -4.0 103.5 -12.05Q108.5 -20.1 110.80000000000001 -20.1Q112.5 -20.1 112.5 -18.8Q112.5 -17.5 107.9 -11.7Q103.30000000000001 -5.9 103.30000000000001 -3.4000000000000004Q103.30000000000001 -2.0 104.35000000000001 -2.0Q105.4 -2.0 109.60000000000001 -4.800000000000001Q117.10000000000001 -9.8 123.4 -14.9ZM147.5 -16.6Q148.2 -17.1 148.8 -17.1Q149.4 -17.1 149.4 -16.400000000000002V-16.2Q141.9 -10.200000000000001 134.60000000000002 -4.95Q127.30000000000001 0.30000000000000004 123.9 0.30000000000000004Q121.4 0.30000000000000004 121.4 -2.4000000000000004Q121.4 -5.1000000000000005 123.80000000000001 -7.800000000000001Q126.2 -10.5 128.55 -12.5Q130.9 -14.5 130.9 -15.15Q130.9 -15.8 130.15 -16.65Q129.4 -17.5 128.9 -17.8Q127.2 -16.1 121.5 -11.600000000000001L121.10000000000001 -13.100000000000001Q127.4 -18.1 128.4 -19.8V-20.700000000000003Q128.4 -23.200000000000003 128.9 -24.1Q129.4 -25.0 131.3 -26.6Q133.2 -28.200000000000003 133.89999999999998 -28.200000000000003Q134.6 -28.200000000000003 135.14999999999998 -27.700000000000003Q135.7 -27.200000000000003 135.7 -26.700000000000003Q135.7 -26.200000000000003 135.35 -25.550000000000004Q135.0 -24.900000000000002 134.65 -24.450000000000003Q134.3 -24.0 133.7 -23.35Q133.1 -22.700000000000003 132.95 -22.450000000000003Q132.8 -22.200000000000003 132.65 -21.6Q132.5 -21.0 132.0 -20.6Q131.5 -20.200000000000003 131.5 -19.6Q131.5 -19.0 132.3 -16.95Q133.1 -14.9 133.1 -13.95Q133.1 -13.0 129.4 -9.45Q125.7 -5.9 125.7 -3.7Q125.7 -2.5 126.80000000000001 -2.5Q128.2 -2.5 132.0 -5.0L133.2 -5.800000000000001Q139.7 -10.3 145.4 -14.9ZM149.5 -1.3Q149.5 -2.8000000000000003 150.95 -5.2Q152.4 -7.6000000000000005 152.5 -8.0Q152.60000000000002 -8.4 152.3 -8.4Q152.0 -8.4 151.45 -7.8500000000000005Q150.9 -7.300000000000001 145.35000000000002 -3.6500000000000004Q139.8 0.0 137.70000000000002 0.0Q136.3 0.0 136.3 -1.8Q136.3 -3.6 141.9 -11.100000000000001Q147.5 -18.6 149.8 -18.6Q150.3 -18.6 150.75 -18.15Q151.20000000000002 -17.7 151.20000000000002 -17.45Q151.20000000000002 -17.2 146.05 -11.3Q140.9 -5.4 140.9 -3.7Q140.9 -3.3000000000000003 141.3 -3.3000000000000003Q143.20000000000002 -3.3000000000000003 149.5 -8.4Q155.8 -13.5 158.45000000000002 -16.3Q161.10000000000002 -19.1 162.60000000000002 -19.1Q164.10000000000002 -19.1 164.10000000000002 -17.8Q164.10000000000002 -17.0 163.5 -16.2Q162.9 -15.4 161.25 -13.350000000000001Q159.60000000000002 -11.3 158.20000000000002 -9.5Q154.3 -4.5 154.3 -3.25Q154.3 -2.0 155.35000000000002 -2.0Q156.4 -2.0 160.5 -4.800000000000001Q168.10000000000002 -9.8 174.4 -14.9L176.60000000000002 -16.7Q177.3 -17.2 177.8 -17.2Q178.3 -17.2 178.3 -16.6V-16.3Q178.70000000000002 -16.3 172.95000000000002 -11.9Q167.20000000000002 -7.5 160.65000000000003 -3.1Q154.10000000000002 1.3 152.4 1.3Q149.5 1.3 149.5 -1.3ZM200.50000000000003 -16.6Q201.20000000000002 -17.1 201.8 -17.1Q202.40000000000003 -17.1 202.40000000000003 -16.400000000000002V-16.2Q192.00000000000003 -7.6000000000000005 186.60000000000002 -4.2Q179.60000000000002 1.1 174.8 1.1Q170.60000000000002 1.1 170.60000000000002 -3.9000000000000004Q170.60000000000002 -10.600000000000001 179.25000000000003 -23.75Q187.90000000000003 -36.9 198.70000000000005 -47.400000000000006Q209.50000000000003 -57.900000000000006 215.00000000000003 -57.900000000000006Q217.50000000000003 -57.900000000000006 217.50000000000003 -55.7Q217.50000000000003 -50.2 204.35000000000002 -37.550000000000004Q191.20000000000002 -24.900000000000002 178.50000000000003 -16.0Q174.8 -8.9 174.8 -5.2Q174.8 -1.5 177.40000000000003 -1.5Q180.00000000000003 -1.5 184.20000000000002 -4.5Q191.3 -8.700000000000001 198.00000000000003 -14.5ZM212.50000000000003 -54.7Q208.3 -54.7 197.60000000000002 -42.6Q186.90000000000003 -30.5 179.9 -18.400000000000002Q191.40000000000003 -26.6 202.40000000000003 -38.45Q213.40000000000003 -50.300000000000004 213.40000000000003 -53.800000000000004Q213.40000000000003 -54.7 212.50000000000003 -54.7Z"/><path transform="translate(237.5 0)" d="M13.3 -27.400000000000002Q13.3 -24.900000000000002 22.400000000000002 -22.6Q27.6 -21.400000000000002 35.0 -20.6Q25.700000000000003 -28.900000000000002 16.6 -28.900000000000002Q13.3 -28.900000000000002 13.3 -27.400000000000002ZM52.900000000000006 -0.7000000000000001Q55.0 -0.7000000000000001 63.300000000000004 -17.2Q52.1 -17.0 49.35 -17.0Q46.6 -17.0 41.6 -17.2Q47.5 -10.100000000000001 51.2 -2.1Q51.800000000000004 -0.7000000000000001 52.900000000000006 -0.7000000000000001ZM84.2 -68.4Q80.9 -68.4 75.4 -61.35000000000001Q69.9 -54.300000000000004 60.85000000000001 -41.400000000000006Q51.800000000000004 -28.5 44.0 -20.0Q51.0 -19.8 56.25 -19.8Q61.5 -19.8 64.7 -20.0Q71.8 -34.0 78.55000000000001 -49.6Q85.30000000000001 -65.2 85.30000000000001 -67.5Q85.30000000000001 -68.4 84.2 -68.4ZM70.10000000000001 -20.200000000000003 90.9 -21.700000000000003Q91.7 -21.700000000000003 91.7 -20.900000000000002Q91.7 -20.1 90.35 -19.200000000000003Q89.0 -18.3 85.1 -18.0Q81.2 -17.7 68.60000000000001 -17.400000000000002Q58.400000000000006 2.5 54.2 2.5Q51.400000000000006 2.5 50.2 0.0Q45.800000000000004 -8.9 39.900000000000006 -15.600000000000001L37.0 -12.8Q22.200000000000003 1.0 2.5 1.0Q-2.5 1.0 -6.25 0.25Q-10.0 -0.5 -10.0 -1.8Q-10.0 -2.7 -8.9 -2.7Q-8.200000000000001 -2.7 -7.2 -2.3000000000000003Q-4.2 -1.1 4.1000000000000005 -1.1Q19.0 -1.1 32.300000000000004 -12.8Q37.1 -17.3 37.2 -17.400000000000002Q27.8 -18.1 21.400000000000002 -19.900000000000002Q10.0 -23.1 10.0 -27.5Q10.0 -29.0 11.65 -30.0Q13.3 -31.0 16.0 -31.0Q27.900000000000002 -31.0 38.6 -20.3Q39.5 -20.3 39.900000000000006 -20.200000000000003Q48.800000000000004 -29.8 61.6 -47.400000000000006Q66.10000000000001 -53.5 70.60000000000001 -59.2Q80.0 -71.0 86.0 -71.0Q89.9 -71.0 89.9 -67.60000000000001Q89.9 -65.3 83.45 -49.65Q77.0 -34.0 70.10000000000001 -20.200000000000003ZM65.4 39.2Q67.8 39.2 73.4 33.6Q79.0 28.0 84.1 20.05Q89.2 12.100000000000001 89.9 6.6000000000000005Q79.6 13.3 71.94999999999999 21.75Q64.3 30.200000000000003 64.3 37.7Q64.3 39.2 65.4 39.2ZM100.9 0.6000000000000001Q97.6 1.8 93.2 4.6000000000000005V5.1000000000000005Q93.2 11.100000000000001 87.0 20.1Q80.8 29.1 73.55 35.45Q66.3 41.800000000000004 62.9 41.800000000000004Q60.3 41.800000000000004 60.3 38.900000000000006Q60.3 34.7 63.15 29.75Q66.0 24.8 70.6 20.200000000000003Q79.6 10.9 90.1 4.3Q89.6 -0.9 83.4 -1.3Q81.9 -1.3 81.9 -2.2Q81.9 -2.5 83.30000000000001 -3.35Q84.7 -4.2 87.80000000000001 -6.1Q90.9 -8.0 95.5 -11.95Q100.1 -15.9 100.1 -18.2Q100.1 -19.3 99.1 -19.3Q96.8 -19.3 90.3 -14.100000000000001L87.2 -11.600000000000001L86.8 -13.100000000000001Q88.0 -14.0 89.5 -15.200000000000001Q98.5 -22.6 102.9 -22.6Q105.6 -22.6 105.6 -19.700000000000003Q105.6 -13.8 87.4 -3.7Q86.6 -3.3000000000000003 86.6 -2.9000000000000004Q86.6 -2.5 86.8 -2.5Q91.8 -1.2000000000000002 92.9 2.6Q95.2 1.2000000000000002 97.85 -0.04999999999999993Q100.5 -1.3 101.3 -1.3Q102.1 -1.3 102.1 -0.6Q102.1 0.1 100.9 0.6000000000000001ZM147.2 -16.7Q147.9 -17.2 148.5 -17.2Q149.1 -17.2 149.1 -16.6V-16.3Q141.2 -9.700000000000001 133.6 -4.5Q126.0 1.3 123.05 1.3Q120.1 1.3 120.1 -1.1Q120.1 -3.7 123.89999999999999 -9.9Q127.69999999999999 -16.1 127.69999999999999 -16.55Q127.69999999999999 -17.0 127.3 -17.0Q126.0 -17.0 119.35 -11.25Q112.69999999999999 -5.5 107.69999999999999 -0.6000000000000001Q105.8 1.1 105.05 1.1Q104.3 1.1 104.3 0.0Q104.3 -1.1 105.6 -2.8000000000000003L140.5 -56.0Q141.6 -57.7 143.45 -57.7Q145.3 -57.7 145.3 -56.5Q145.3 -55.800000000000004 144.75 -55.0Q144.2 -54.2 138.0 -45.45Q131.8 -36.7 130.85000000000002 -35.1Q129.9 -33.5 122.15 -21.9Q114.39999999999999 -10.3 113.94999999999999 -9.65Q113.5 -9.0 113.5 -8.600000000000001Q113.5 -8.200000000000001 113.85 -8.200000000000001Q114.19999999999999 -8.200000000000001 114.3 -8.3Q117.5 -11.5 123.05 -15.75Q128.6 -20.0 130.7 -20.0Q131.5 -20.0 132.1 -19.450000000000003Q132.7 -18.900000000000002 132.7 -17.650000000000002Q132.7 -16.400000000000002 128.79999999999998 -10.850000000000001Q124.89999999999999 -5.300000000000001 124.89999999999999 -3.6500000000000004Q124.89999999999999 -2.0 125.94999999999999 -2.0Q127.0 -2.0 131.2 -4.800000000000001Q138.7 -9.8 145.0 -14.9ZM157.4 -12.0Q156.8 -12.0 156.8 -12.45Q156.8 -12.9 157.5 -13.5Q160.8 -16.2 160.8 -18.400000000000002Q160.8 -19.8 158.3 -20.0Q153.8 -19.900000000000002 147.55 -13.500000000000002Q141.3 -7.1000000000000005 141.3 -3.9000000000000004Q141.3 -2.8000000000000003 142.55 -2.8000000000000003Q143.8 -2.8000000000000003 145.9 -4.5Q147.8 -5.7 153.0 -10.5Q154.20000000000002 -11.700000000000001 155.3 -11.700000000000001Q156.70000000000002 -11.700000000000001 156.70000000000002 -10.4Q156.70000000000002 -9.9 156.40000000000003 -9.600000000000001Q156.10000000000002 -9.3 155.3 -8.350000000000001Q154.5 -7.4 153.9 -6.6000000000000005Q152.1 -4.0 152.1 -3.2Q152.1 -1.2000000000000002 153.70000000000002 -1.2000000000000002Q155.8 -1.2000000000000002 161.60000000000002 -5.050000000000001Q167.4 -8.9 172.20000000000002 -12.8L177.0 -16.6Q177.70000000000002 -17.1 178.3 -17.1Q178.9 -17.1 178.9 -16.400000000000002V-16.2Q171.20000000000002 -9.700000000000001 162.65 -4.0Q154.1 1.7000000000000002 151.4 1.7000000000000002Q148.20000000000002 1.7000000000000002 148.20000000000002 -1.7000000000000002Q148.20000000000002 -2.5 148.5 -3.2Q148.8 -3.9000000000000004 148.8 -4.2Q148.8 -4.5 148.6 -4.6000000000000005Q148.3 -4.6000000000000005 144.75 -1.9000000000000004Q141.20000000000002 0.8 138.55 0.8Q135.9 0.8 135.9 -2.0000000000000004Q135.9 -4.800000000000001 139.65 -9.55Q143.4 -14.3 149.7 -18.200000000000003Q156.0 -22.1 162.0 -22.1Q163.4 -22.1 164.35000000000002 -21.400000000000002Q165.3 -20.700000000000003 165.3 -19.25Q165.3 -17.8 162.4 -14.9Q159.5 -12.0 157.4 -12.0ZM199.20000000000002 -16.6Q199.9 -17.1 200.5 -17.1Q201.10000000000002 -17.1 201.10000000000002 -16.400000000000002V-16.2Q193.60000000000002 -10.200000000000001 186.3 -4.95Q179.0 0.30000000000000004 175.6 0.30000000000000004Q173.1 0.30000000000000004 173.1 -2.4000000000000004Q173.1 -5.1000000000000005 175.5 -7.800000000000001Q177.9 -10.5 180.25 -12.5Q182.6 -14.5 182.6 -15.15Q182.6 -15.8 181.85 -16.65Q181.1 -17.5 180.6 -17.8Q178.9 -16.1 173.20000000000002 -11.600000000000001L172.8 -13.100000000000001Q179.1 -18.1 180.1 -19.8V-20.700000000000003Q180.1 -23.200000000000003 180.6 -24.1Q181.1 -25.0 183.0 -26.6Q184.9 -28.200000000000003 185.60000000000002 -28.200000000000003Q186.3 -28.200000000000003 186.85000000000002 -27.700000000000003Q187.4 -27.200000000000003 187.4 -26.700000000000003Q187.4 -26.200000000000003 187.05 -25.550000000000004Q186.70000000000002 -24.900000000000002 186.35000000000002 -24.450000000000003Q186.0 -24.0 185.4 -23.35Q184.8 -22.700000000000003 184.65 -22.450000000000003Q184.5 -22.200000000000003 184.35000000000002 -21.6Q184.20000000000002 -21.0 183.70000000000002 -20.6Q183.20000000000002 -20.200000000000003 183.20000000000002 -19.6Q183.20000000000002 -19.0 184.0 -16.95Q184.8 -14.9 184.8 -13.95Q184.8 -13.0 181.10000000000002 -9.45Q177.4 -5.9 177.4 -3.7Q177.4 -2.5 178.5 -2.5Q179.9 -2.5 183.70000000000002 -5.0L184.9 -5.800000000000001Q191.4 -10.3 197.10000000000002 -14.9Z"/></g>
+  <path class="sig-flourish" d="M14.3 21.8 C 104.3 37.8, 332.6 19.8, 452.6 -6.2" fill="none" stroke="url(#sg)" stroke-width="3.2" stroke-linecap="round"/>
+  <circle class="sig-dot" cx="457.6" cy="-14.2" r="4.2" fill="#f6851f"/>
+</svg></a>
     <div class="links">
-      <a href="#product">Product</a><a href="#built">Client builds</a><a href="#academy">Academy</a><a href="#aim">AIM OS</a><a href="#experience">Experience</a><a href="resume.html">Résumé</a>
+      <a href="#product">Product</a><a href="#why">Story</a><a href="#built">Client builds</a><a href="#academy">Academy</a><a href="#aim">AIM OS</a><a href="#experience">Experience</a><a href="resume.html">Résumé</a>
     </div>
     <a class="hire" href="mailto:hairul.azhar.ofc@gmail.com?subject=Opportunity%20for%20Hairul%20Azhar">Hire me</a>
   </div>
@@ -321,9 +354,8 @@ footer a{color:var(--muted)}
     <a href="https://www.linkedin.com/in/hairul-azhar-7095b9347" target="_blank" rel="noopener">linkedin.com/in/hairul-azhar-7095b9347</a> &middot; <a href="https://github.com/CybergigSG" target="_blank" rel="noopener">github.com/CybergigSG</a></div>
   <div class="ctas reveal">
     <a class="btn pri" href="mailto:hairul.azhar.ofc@gmail.com?subject=Opportunity%20for%20Hairul%20Azhar">Email me</a>
-    <a class="btn" href="resume-2page.html">Résumé &middot; 2 pages</a>
-    <a class="btn" href="resume.html">Full résumé &middot; 3 pages</a>
-    <a class="btn" href="assets/Hairul_Azhar_Resume.pdf" download>PDF &#8595;</a>
+    <a class="btn" href="resume.html">View résumé</a>
+    <a class="btn" href="assets/Hairul_Azhar_Resume.pdf" download>Résumé PDF &#8595;</a>
     <a class="btn" href="https://www.linkedin.com/in/hairul-azhar-7095b9347" target="_blank" rel="noopener">LinkedIn &#8599;</a>
   </div>
   <div class="pills reveal">
@@ -341,7 +373,7 @@ footer a{color:var(--muted)}
     <div><b>10+ yrs</b><span>running real operations before AI &mdash; resorts, logistics, retail</span></div>
   </div>
 
-  <p class="lead reveal"><b>KatalockAi</b> is a live, global, multilingual agentic AI workspace I architect single-handedly &mdash; real orchestration and verification infrastructure, not a thin wrapper on someone else's API. The LLM is localised for India, Singapore and Indonesia. This is a tour of what I've built, what it has produced for real clients, and the curriculum I wrote to teach it.</p>
+  <p class="lead reveal"><b>KatalockAi</b> is a live, global, multilingual agentic AI workspace I founded and architect end to end &mdash; real orchestration and verification infrastructure, not a thin wrapper on someone else's API. The LLM is localised for India, Singapore and Indonesia. This is a tour of what I've built, what it has produced for real clients, and the curriculum I wrote to teach it.</p>
   <div class="rule reveal"></div>
 
   <!-- 01 -->
@@ -371,9 +403,48 @@ footer a{color:var(--muted)}
     </div>
   </div>
 
+
   <!-- 02 -->
+  <div class="sec reveal" id="why">
+    <div class="sechead"><span class="secno">02</span><span class="sectitle">Why I built KatalockAi &mdash; one person shouldn't have to be ten</span></div>
+    <div class="underline"></div>
+  </div>
+  <div class="founder">
+    <div class="panel letter reveal">
+      <blockquote>I built Katalock because I was tired of watching great businesses lose to bad tools.</blockquote>
+      <p>Across India and Southeast Asia I kept meeting the same person: a founder, a shop owner, a freelancer, up past midnight doing ten jobs at once. Research, design, copy, code, GST, ads, support. Alone.</p>
+      <p>Western AI tools gave them answers, but <b>an answer isn't a team</b>. Those tools didn't speak Bahasa, Tamil or Mandarin, didn't understand GST or UPI, and were priced for San Francisco, not a small business in Jaipur or Bengaluru. So I built a <b>matrix of specialist agents that actually do the work</b>, with a small team in Singapore and India, with no VC pressure and no bloat. We started with the API, then built the workspace. Today it runs from &#8377;299 a month up to done-for-you agent teams.</p>
+      <div class="signed"><img src="assets/img/signature.svg" alt="Hairul Azhar signature"><span>Founder, Agentic Intelligence Matrix (AiM Intelligence), Singapore<br><a href="https://www.katalock.net/about" target="_blank" rel="noopener">Read the full story on katalock.net/about &#8599;</a></span></div>
+    </div>
+    <div class="panel namecard reveal">
+      <div class="lbl">The name</div>
+      <div class="big">Kata lokal &mdash; <i>local words</i></div>
+      <p>In English, Katalock is a catalyst that locks in trust. Said aloud in Bahasa or Malay it becomes <i>kata lokal</i>: an AI that finally speaks your language. Local words, verified work.</p>
+      <div class="roots">
+        <div class="lbl">The roots</div>
+        <p>AiM Intelligence started in AI safety and red-teaming: stress-testing models to find where they lie, leak and fail. That became the manifesto:</p>
+        <q>Intelligence isn't about answering faster. It's about acting responsibly, autonomously, and in service of humans.</q>
+      </div>
+    </div>
+  </div>
+  <div class="matrix">
+    <div class="card reveal"><div class="t"><span class="ic">&#10003;</span>Researcher</div><p>Cross-checks itself several times before it answers, and says how confident it is.</p></div>
+    <div class="card reveal"><div class="t"><span class="ic">&lt;/&gt;</span>Builder</div><p>Writes real apps and fixes its own mistakes on a Runs board.</p></div>
+    <div class="card reveal"><div class="t"><span class="ic">&#9733;</span>Marketer</div><p>Drafts and schedules campaigns while you sleep, and never posts without approval.</p></div>
+    <div class="card reveal"><div class="t"><span class="ic">&#9654;</span>Studio</div><p>Turns a sentence into images, videos and songs, like the showreel below.</p></div>
+  </div>
+  <div class="facts reveal">
+    <span class="route hot">Nothing leaves without a human saying yes</span>
+    <span class="route">Hyper-local: native compliance, taxes and workflows</span>
+    <span class="route">Trust-first: verified answers with honest limits</span>
+    <span class="route">Autonomous teams: month-end, competitor watch, brand growth</span>
+    <span class="route">Open matrix: Skill Library for local ERP and CRM</span>
+    <span class="route">Mission: give a million businesses their time back</span>
+  </div>
+
+  <!-- 03 -->
   <div class="sec reveal">
-    <div class="sechead"><span class="secno">02</span><span class="sectitle">Global by design &mdash; the LLM, localised per market</span></div>
+    <div class="sechead"><span class="secno">03</span><span class="sectitle">Global by design &mdash; the LLM, localised per market</span></div>
     <div class="underline"></div>
   </div>
   <div class="markets reveal">
@@ -385,7 +456,7 @@ footer a{color:var(--muted)}
 
   <!-- 03 -->
   <div class="sec reveal">
-    <div class="sechead"><span class="secno">03</span><span class="sectitle">Real infrastructure, not a wrapper</span></div>
+    <div class="sechead"><span class="secno">04</span><span class="sectitle">Real infrastructure, not a wrapper</span></div>
     <div class="underline"></div>
   </div>
   <div class="grid">
@@ -427,7 +498,7 @@ footer a{color:var(--muted)}
 
   <!-- 04 -->
   <div class="sec reveal" id="built">
-    <div class="sechead"><span class="secno">04</span><span class="sectitle">Built with KatalockAi &mdash; real output for real clients</span></div>
+    <div class="sechead"><span class="secno">05</span><span class="sectitle">Built with KatalockAi &mdash; real output for real clients</span></div>
     <div class="underline"></div>
     <p class="secintro">The workspace is judged by what it ships. Below is <b>unedited output</b>: an AI-generated interior-staging video, and two production websites live on their own domains today.</p>
   </div>
@@ -481,7 +552,7 @@ footer a{color:var(--muted)}
 
   <!-- 05 -->
   <div class="sec reveal" id="academy">
-    <div class="sechead"><span class="secno">05</span><span class="sectitle">KatalockAi Academy &mdash; the curriculum I designed</span></div>
+    <div class="sechead"><span class="secno">06</span><span class="sectitle">KatalockAi Academy &mdash; the curriculum I designed</span></div>
     <div class="underline"></div>
   </div>
   <div class="acad reveal" style="margin-top:16px">
@@ -594,7 +665,7 @@ footer a{color:var(--muted)}
 
   <!-- 06 -->
   <div class="sec reveal" id="aim">
-    <div class="sechead"><span class="secno">06</span><span class="sectitle">AIM OS &mdash; a governed operating system for agents</span></div>
+    <div class="sechead"><span class="secno">07</span><span class="sectitle">AIM OS &mdash; a governed operating system for agents</span></div>
     <div class="underline"></div>
   </div>
   <div class="panel reveal" style="margin-top:16px">
@@ -613,7 +684,7 @@ footer a{color:var(--muted)}
 
   <!-- 07 -->
   <div class="sec reveal" id="experience">
-    <div class="sechead"><span class="secno">07</span><span class="sectitle">Experience &mdash; operations first, then AI</span></div>
+    <div class="sechead"><span class="secno">08</span><span class="sectitle">Experience &mdash; operations first, then AI</span></div>
     <div class="underline"></div>
   </div>
   <div class="bridge reveal">Forward-deployed work is half engineering, half operations. I spent ten years accountable for budgets, SLAs and on-site delivery before writing agents &mdash; so I build AI the way operators need it: verified, gated, and recoverable.</div>
@@ -636,7 +707,7 @@ footer a{color:var(--muted)}
 
   <!-- 08 -->
   <div class="sec reveal">
-    <div class="sechead"><span class="secno">08</span><span class="sectitle">Stack &amp; credentials</span></div>
+    <div class="sechead"><span class="secno">09</span><span class="sectitle">Stack &amp; credentials</span></div>
     <div class="underline"></div>
   </div>
   <div class="two reveal" style="margin-top:16px">
@@ -661,11 +732,11 @@ footer a{color:var(--muted)}
   <div class="cta reveal" id="contact">
     <h2>Looking for someone to put AI in front of real customers?</h2>
     <p>I'm open to forward-deployed, solutions and applied AI engineering roles, in Singapore or anywhere globally. Available immediately or on two weeks' notice.</p>
-    <div class="ctas"><a class="btn pri" href="mailto:hairul.azhar.ofc@gmail.com?subject=Opportunity%20for%20Hairul%20Azhar">hairul.azhar.ofc@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/hairul-azhar-7095b9347" target="_blank" rel="noopener">LinkedIn &#8599;</a><a class="btn" href="assets/Hairul_Azhar_Resume.pdf" download>Résumé PDF &middot; 2 pages</a><a class="btn" href="assets/Hairul_Azhar_Resume_Full.pdf" download>Full résumé PDF &middot; 3 pages</a></div>
+    <div class="ctas"><a class="btn pri" href="mailto:hairul.azhar.ofc@gmail.com?subject=Opportunity%20for%20Hairul%20Azhar">hairul.azhar.ofc@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/hairul-azhar-7095b9347" target="_blank" rel="noopener">LinkedIn &#8599;</a><a class="btn" href="resume.html">View résumé</a><a class="btn" href="assets/Hairul_Azhar_Resume.pdf" download>Résumé PDF &#8595;</a></div>
   </div>
 
   <footer>
-    <div>Hairul Azhar Bin Abu Bakar &middot; Forward-Deployed AI Engineer</div>
+    <div style="display:flex;align-items:center;gap:12px"><img src="assets/img/signature.svg" alt="" style="height:30px;width:auto">Hairul Azhar Bin Abu Bakar &middot; Forward-Deployed AI Engineer</div>
     <div><a href="https://www.katalock.net" target="_blank" rel="noopener">katalock.net</a> &middot; <a href="https://www.katalock.net/academy" target="_blank" rel="noopener">katalock.net/academy</a> &middot; <a href="https://aimglobal.io" target="_blank" rel="noopener">aimglobal.io</a></div>
   </footer>
   <div class="note">Katalock Studio, all KatalockAi Academy panels, the client-site captures and the video are real product output. The remaining workspace panels (homepage, markets, feature cards) are styled representations &mdash; see the live product at katalock.net.</div>
