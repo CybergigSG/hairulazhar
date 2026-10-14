@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hairul Azhar — Forward-Deployed AI Engineer</title>
+<meta name="description" content="Hairul Azhar Bin Abu Bakar — Forward-Deployed AI Engineer and founder of KatalockAi, KatalockAi Academy and AIM OS. Agentic AI built, shipped and run in production.">
+<meta property="og:title" content="Hairul Azhar — Forward-Deployed AI Engineer">
+<meta property="og:description" content="KatalockAi workspace, a 523-lesson AI engineering Academy, AIM OS, and real client builds.">
+<meta property="og:image" content="assets/video/katalock-interior-staging-poster.jpg">
+<style>
+:root{
+  --ink:#0b0f1c; --panel:#141b30; --line:rgba(255,255,255,.09);
+  --muted:#99a4bd; --text:#eaeefb; --saffron:#f6851f; --saffron2:#ffb347;
+  --blue:#5b8cff; --green:#2fd39a; --amber:#f0b429; --rose:#ff6a5a; --red:#ff5a4d;
+}
+*{box-sizing:border-box}
+html{background:#0b0f1c;scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;color:var(--text);background:#0b0f1c;
+  font-family:"Helvetica Neue",Helvetica,Arial,"DejaVu Sans",sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--saffron2);text-decoration:none}
+img,video{max-width:100%}
+svg{display:block}
+.wrap{max-width:1020px;margin:0 auto;padding:30px 36px 60px;position:relative;z-index:1}
+
+.aura{display:none}
+@media screen{
+  .aura{display:block;position:fixed;inset:-20%;z-index:0;filter:blur(10px);pointer-events:none}
+  .aura i{position:absolute;border-radius:50%;mix-blend-mode:screen;opacity:.26}
+  .aura .a1{width:52vw;height:52vw;left:-8vw;top:-10vw;background:radial-gradient(circle,#f6851f,transparent 62%);animation:drift1 26s ease-in-out infinite}
+  .aura .a2{width:48vw;height:48vw;right:-10vw;top:6vw;background:radial-gradient(circle,#5b8cff,transparent 62%);animation:drift2 32s ease-in-out infinite}
+  .aura .a3{width:44vw;height:44vw;left:24vw;bottom:-18vw;background:radial-gradient(circle,#7c5cff,transparent 62%);animation:drift3 38s ease-in-out infinite}
+  @keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(6vw,4vw)}}
+  @keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(-5vw,5vw)}}
+  @keyframes drift3{0%,100%{transform:translate(0,0)}50%{transform:translate(3vw,-5vw)}}
+}
+
+/* top nav */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(11,15,28,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topnav .in{max-width:1020px;margin:0 auto;padding:11px 36px;display:flex;align-items:center;gap:18px}
+.topnav .links{display:flex;gap:16px;margin-left:auto;font-size:13px;flex-wrap:wrap}
+.topnav .links a{color:#c6cde0}
+.topnav .links a:hover{color:var(--saffron2)}
+.topnav .hire{background:linear-gradient(135deg,#ffb347,#f6851f);color:#0b0f1c;font-weight:700;border-radius:8px;padding:6px 12px;font-size:12.5px;white-space:nowrap}
+
+.brandrow{display:flex;align-items:center;gap:11px}
+.kmark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#232b44,#0b1020);
+  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:16px;
+  border:1px solid rgba(255,255,255,.16);box-shadow:0 6px 20px rgba(0,0,0,.5);flex:none}
+.brandrow .nm{font-weight:800;font-size:18px;letter-spacing:-.01em;color:var(--text)}
+.brandrow .nm .ai{color:var(--saffron)}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--saffron2);font-weight:700;margin:26px 0 10px}
+h1{font-size:46px;line-height:1.02;letter-spacing:-.03em;margin:0 0 10px;font-weight:800}
+.grad{color:#ff9a3c}
+@media screen{.grad{background:linear-gradient(100deg,#ffb347,#f6851f 42%,#ff7a59);background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:sweep 7s ease-in-out infinite}
+  @keyframes sweep{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}}
+.role{color:#c6cde0;font-size:16px;font-weight:600;margin:0 0 14px}
+.contact{color:var(--muted);font-size:13px;line-height:1.8}
+.contact b{color:#dde3f2;font-weight:600}
+.contact a{color:#dde3f2}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:10px;padding:10px 15px;font-size:13.5px;font-weight:700;border:1px solid var(--line);color:#eaeefb;background:rgba(255,255,255,.04);cursor:pointer;font-family:inherit}
+.btn:hover{border-color:rgba(246,133,31,.55)}
+.btn.pri{background:linear-gradient(135deg,#ffb347,#f6851f);color:#0b0f1c;border-color:transparent}
+.btn.sm{padding:7px 11px;font-size:12px;border-radius:8px}
+.pills{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0 0}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.04);
+  border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:12.5px;color:#dfe4f2}
+a.pill:hover{border-color:rgba(246,133,31,.5)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);flex:none}
+@media screen{.dot{animation:pulse 2.2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(47,211,154,.55)}70%{box-shadow:0 0 0 7px rgba(47,211,154,0)}100%{box-shadow:0 0 0 0 rgba(47,211,154,0)}}}
+
+.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.proof div{border:1px solid var(--line);border-radius:12px;padding:14px;background:rgba(255,255,255,.025)}
+.proof b{display:block;font-size:24px;letter-spacing:-.02em;color:#fff}
+.proof span{font-size:11.5px;color:var(--muted);line-height:1.35;display:block;margin-top:3px}
+
+.lead{font-size:17px;color:#cdd4e6;max-width:780px;margin:30px 0 0}
+.lead b{color:#fff}
+.rule{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent);margin:26px 0 0}
+
+.sec{margin-top:56px}
+.sechead{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+.secno{font-size:12px;font-weight:800;color:#0b0f1c;background:linear-gradient(135deg,#ffb347,#f6851f);border-radius:7px;padding:4px 8px}
+.sectitle{font-size:19px;font-weight:700;letter-spacing:-.01em}
+.underline{height:3px;width:64px;border-radius:3px;background:linear-gradient(90deg,#f6851f,transparent);margin:-4px 0 0}
+.secintro{color:#c3cada;font-size:14px;margin:16px 0 0;max-width:780px}
+.secintro b{color:#fff}
+
+.card,.mcard,.shotwrap,.browser,.acad,.panel{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:14px}
+.card,.mcard,.shotwrap,.browser{break-inside:avoid}
+@media screen{
+  .card,.mcard,.shotwrap{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .card:hover,.mcard:hover,.shotwrap:hover{transform:translateY(-4px);border-color:rgba(246,133,31,.45);box-shadow:0 18px 40px rgba(0,0,0,.4)}
+}
+.browser{overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.bbar{display:flex;align-items:center;gap:7px;padding:9px 12px;background:#0e1424;border-bottom:1px solid var(--line)}
+.bbar i{width:11px;height:11px;border-radius:50%;display:inline-block;flex:none}
+.bbar .u{margin-left:12px;font-size:12px;color:#aeb6c9;background:#1a2336;border:1px solid #2a3550;border-radius:6px;padding:4px 12px;max-width:340px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.browser img{display:block;width:100%}
+.cap{color:var(--muted);font-size:12.5px;margin-top:11px}
+
+.hp{background:#fff;color:#0d1117}
+.hp .nav{display:flex;align-items:center;gap:15px;padding:13px 18px;border-bottom:1px solid #eef0f3;font-size:13px;color:#2b3340;flex-wrap:wrap}
+.hp .nav a{color:#2b3340}
+.hp .nav .brand{font-weight:800;font-size:15px;display:flex;align-items:center;gap:7px}
+.hp .nav .brand .ai{color:var(--saffron)}
+.hp .nav .brand .km{width:21px;height:21px;border-radius:6px;background:#0d1117;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:11px}
+.hp .nav .cur{color:var(--saffron);font-weight:600}
+.hp .nav .sp{flex:1}
+.hp .nav .b{border:1px solid #d8dce3;border-radius:7px;padding:5px 10px;font-size:12px}
+.hp .nav .b.dk{background:#0d1117;color:#fff;border-color:#0d1117}
+.hp .body{padding:30px 20px 34px;text-align:center}
+.hp .fp{display:inline-block;background:#f4f6f9;border:1px solid #e7eaef;border-radius:999px;padding:6px 13px;font-size:12.5px;color:#2b3340;font-weight:600}
+.hp .kk{color:#6b7686;font-size:12px;letter-spacing:.05em;margin:14px 0 6px;font-weight:600}
+.hp h3{font-size:40px;line-height:1.05;margin:2px 0 0;letter-spacing:-.03em;font-weight:800}
+.hp h3 .dn{color:var(--red)}
+.hp .sub{color:#5b6472;font-size:14px;margin:13px auto 0;max-width:430px}
+.tb{margin:22px auto 0;max-width:520px;border:1px solid #e3e7ee;border-radius:14px;padding:15px;text-align:left;box-shadow:0 8px 22px rgba(13,17,23,.07)}
+.tb .ph{color:#9099a6;font-size:13.5px}
+.tb .row{display:flex;align-items:center;gap:8px;margin-top:15px}
+.chip{border:1px solid #e3e7ee;border-radius:999px;padding:5px 11px;font-size:12px;color:#39414f;background:#fbfcfd}
+.tb .snd{margin-left:auto;width:30px;height:30px;border-radius:8px;background:#0d1117;color:#fff;display:flex;align-items:center;justify-content:center}
+.ex{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-top:15px}
+
+.markets{display:flex;gap:14px;flex-wrap:wrap}
+.mcard{flex:1 1 220px;padding:18px;text-align:center;position:relative;overflow:hidden}
+.mcard .cbadge{width:38px;height:38px;border-radius:10px;background:rgba(246,133,31,.14);border:1px solid rgba(246,133,31,.32);color:#ffd9b0;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;letter-spacing:.04em}
+.mcard h4{margin:4px 0 2px;font-size:17px}
+.mcard .bf{color:var(--muted);font-size:12.5px}
+.mcard .lg{color:#c3cada;font-size:12px;margin-top:9px;line-height:1.5}
+.mcard .cu{color:var(--saffron2);font-size:12px;margin-top:7px;font-weight:600;letter-spacing:.03em}
+
+.grid{display:flex;flex-wrap:wrap;gap:15px}
+.card{flex:1 1 300px;padding:18px}
+.card .t{font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px}
+.card .t .ic{width:30px;height:30px;border-radius:9px;background:rgba(246,133,31,.13);border:1px solid rgba(246,133,31,.32);color:var(--saffron2);display:flex;align-items:center;justify-content:center;flex:none}
+.card p{color:#b9c0d4;font-size:13px;margin:10px 0 0}
+.mini{margin-top:12px;background:rgba(0,0,0,.28);border:1px solid var(--line);border-radius:10px;padding:11px}
+.lbl{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.verline{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:12.5px}
+.tick{color:var(--green);font-weight:800}
+.conf{margin-top:9px;height:7px;border-radius:5px;background:rgba(255,255,255,.08);overflow:hidden}
+.conf>i{display:block;height:100%;width:92%;background:linear-gradient(90deg,#2fd39a,#5bd1a8)}
+.confrow{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:6px}
+.tags{display:flex;gap:6px;margin-top:9px;flex-wrap:wrap}
+.tag{font-size:10.5px;color:#cdd4e4;border:1px solid var(--line);border-radius:999px;padding:3px 8px}
+.flow{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:9px}
+.node{font-size:11px;padding:6px 9px;border-radius:8px;border:1px solid var(--line);display:flex;align-items:center;gap:6px}
+.node .s{width:7px;height:7px;border-radius:50%}
+.s.done{background:var(--green)}.s.run{background:var(--blue)}.s.wait{background:var(--muted)}
+.arr{color:var(--muted)}
+.led{display:flex;flex-direction:column;gap:7px;margin-top:9px}
+.led .r{display:flex;align-items:center;gap:9px;font-size:12px}
+.led .f{color:var(--muted);width:86px}.led .v{color:#dfe4f0;flex:1}
+.led .b{width:9px;height:9px;border-radius:50%}
+.b.g{background:var(--green)}.b.a{background:var(--amber)}.b.r{background:var(--rose)}
+.seq{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}
+.st{font-size:11px;padding:5px 9px;border-radius:7px;background:rgba(91,140,255,.12);border:1px solid rgba(91,140,255,.3);color:#cdd9ff}
+.idot{width:8px;height:8px;border-radius:50%;background:var(--amber);display:inline-block;margin-right:7px;vertical-align:middle}
+
+/* built with KatalockAi */
+.showreel{display:grid;grid-template-columns:1.55fr 1fr;gap:16px;margin-top:18px;align-items:start}
+.showreel video{display:block;width:100%;aspect-ratio:16/9;background:#000;object-fit:cover}
+.showreel .side{padding:18px}
+.showreel .side h4{margin:0 0 6px;font-size:16px}
+.showreel .side p{color:#b9c0d4;font-size:13px;margin:0 0 10px}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.ba figure{margin:0;position:relative;border-radius:9px;overflow:hidden;border:1px solid var(--line)}
+.ba img{display:block;width:100%}
+.ba figcaption{position:absolute;left:6px;bottom:6px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;background:rgba(11,15,28,.8);padding:3px 7px;border-radius:5px;color:#dfe4f2}
+.sites{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.site{display:flex;flex-direction:column}
+.site .view{position:relative;height:300px;overflow:hidden;background:#0e1424}
+.site .view img{position:absolute;left:0;top:0;width:100%;height:auto;transform:translateY(0)}
+@media screen and (prefers-reduced-motion:no-preference){
+  .site .view img{transition:transform 6s ease-in-out}
+  .site .view:hover img{transform:translateY(calc(-100% + 300px))}
+}
+.site .view iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff}
+.site .hint{position:absolute;right:10px;bottom:10px;font-size:10.5px;background:rgba(11,15,28,.82);border:1px solid var(--line);border-radius:999px;padding:4px 9px;color:#dfe4f2;pointer-events:none}
+.site .meta{padding:15px 16px 16px;border-top:1px solid var(--line)}
+.site .meta h4{margin:0;font-size:15.5px;display:flex;align-items:center;gap:8px}
+.site .meta p{color:#b9c0d4;font-size:12.8px;margin:7px 0 0}
+.site .acts{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+
+/* academy */
+.acad{padding:26px}
+.stats{display:flex;gap:30px;flex-wrap:wrap;margin:6px 0 18px}
+.stat .big{font-size:30px;font-weight:800;color:#fff;letter-spacing:-.02em}
+.stat .cap2{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.routes{display:flex;gap:8px;flex-wrap:wrap}
+.route{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:6px 11px;color:#cfd6e6}
+.route.hot{border-color:rgba(246,133,31,.5);color:#ffd9b0;background:rgba(246,133,31,.1)}
+.subh{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:28px 0 12px;font-weight:700}
+.bands{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.band{border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(0,0,0,.18)}
+.band .bh{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--saffron2);font-weight:700;margin-bottom:9px}
+.phz{display:grid;grid-template-columns:22px 1fr;gap:2px 7px;margin-bottom:9px;font-size:12px;color:#dfe4f0;line-height:1.3}
+.phz .n{color:var(--muted);font-variant-numeric:tabular-nums;font-size:11px;padding-top:1px}
+.phz .bar{grid-column:2;height:4px;border-radius:3px;background:rgba(255,255,255,.07);overflow:hidden}
+.phz .bar i{display:block;height:100%;background:linear-gradient(90deg,#f6851f,#ffb347);border-radius:3px}
+.phz .c{grid-column:2;font-size:10.5px;color:var(--muted)}
+.deep{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.deep .card{padding:15px}
+.deep .card .t{font-size:14px}
+.kw{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+.kw span{font-size:11px;color:#dfe4f0;background:rgba(91,140,255,.1);border:1px solid rgba(91,140,255,.26);border-radius:6px;padding:3px 7px}
+.rtable{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.rrow{border:1px solid var(--line);border-radius:11px;padding:11px 13px;background:rgba(0,0,0,.16)}
+.rrow .rn{font-size:10.5px;color:var(--saffron2);font-weight:800;letter-spacing:.08em}
+.rrow .rt{font-weight:700;font-size:13.5px;margin-top:2px}
+.rrow .rr{font-size:11.5px;color:var(--muted);margin-top:3px}
+.paths{display:flex;flex-wrap:wrap;gap:8px}
+.profshot{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px}
+.profshot .txt{flex:1 1 300px}
+.profshot .fig{flex:1 1 320px}
+.who{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.profshot .txt p{color:#c3cada;font-size:13px;margin:0 0 10px}
+.shotwrap{overflow:hidden}
+.shotwrap img{display:block;width:100%}
+.shotwrap .c{padding:11px 13px;font-size:12px;color:#aeb6c9;border-top:1px solid var(--line)}
+.galh{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:26px 0 2px;font-weight:700}
+.gal{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px}
+.gal .shotwrap{flex:1 1 320px}
+
+/* AIM OS */
+.panel{padding:22px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.kpis div{border:1px solid var(--line);border-radius:12px;padding:13px;background:rgba(0,0,0,.18)}
+.kpis b{display:block;font-size:26px;color:#fff;letter-spacing:-.02em}
+.kpis span{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+
+/* experience */
+.tl{position:relative;margin-top:18px;padding-left:22px}
+.tl:before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,#f6851f,rgba(91,140,255,.4),transparent)}
+.job{position:relative;margin-bottom:18px;break-inside:avoid}
+.job:before{content:"";position:absolute;left:-22px;top:6px;width:12px;height:12px;border-radius:50%;background:#0b0f1c;border:2px solid var(--saffron)}
+.job.ops:before{border-color:var(--blue)}
+.job .jh{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.job .jt{font-weight:700;font-size:14.5px}
+.job .jt span{color:var(--muted);font-weight:500}
+.job .jd{font-size:12px;color:var(--muted);white-space:nowrap}
+.job p{color:#b9c0d4;font-size:13px;margin:4px 0 0;max-width:820px}
+.job p b{color:#fff;font-weight:600}
+.bridge{margin-top:8px;border:1px dashed rgba(246,133,31,.4);border-radius:12px;padding:13px 15px;color:#d9dfee;font-size:13.5px;background:rgba(246,133,31,.05)}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.list{margin:0;padding:0;list-style:none}
+.list li{font-size:13px;color:#c3cada;padding:7px 0;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.list li b{color:#fff;font-weight:600}
+
+.cta{margin-top:56px;padding:30px;border-radius:16px;border:1px solid rgba(246,133,31,.35);background:radial-gradient(120% 140% at 0% 0%,rgba(246,133,31,.16),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
+.cta h2{margin:0;font-size:28px;letter-spacing:-.02em}
+.cta p{color:#c3cada;margin:8px 0 0;font-size:14.5px;max-width:640px}
+
+footer{margin-top:40px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+.note{color:#7f879b;font-size:11px;margin-top:22px;text-align:center}
+
+@media screen{
+  html.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  html.js .reveal.in{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .aura,.grad,.dot{animation:none!important}
+  html.js .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+@media (max-width:860px){
+  .bands{grid-template-columns:repeat(2,1fr)}
+  .deep{grid-template-columns:1fr 1fr}
+  .showreel,.sites,.two{grid-template-columns:1fr}
+  .proof,.kpis{grid-template-columns:repeat(2,1fr)}
+  .topnav .links{display:none}
+  .topnav .hire{margin-left:auto}
+}
+@media (max-width:560px){
+  .wrap{padding:22px 16px 48px}
+  .topnav .in{padding:10px 16px}
+  h1{font-size:34px}
+  .hp h3{font-size:28px}
+  .deep,.rtable{grid-template-columns:1fr}
+  .bands{grid-template-columns:1fr}
+  .acad,.panel,.cta{padding:18px}
+  .site .view{height:240px}
+  .bbar .u{max-width:190px}
+}
+@page{size:A4;margin:12mm 11mm}
+@media print{
+  .topnav,.aura,.site .acts,.site .hint,.ctas{display:none!important}
+  .wrap{max-width:none;padding:0}
+  .sec{margin-top:24px}
+  .browser,.card,.mcard,.shotwrap,.acad{box-shadow:none}
+  h1{font-size:38px}
+}
+</style>
+</head>
+<body>
+<div class="aura"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+
+<nav class="topnav">
+  <div class="in">
+    <a class="brandrow" href="#top"><span class="kmark">K</span><span class="nm">Katalock<span class="ai">Ai</span></span></a>
+    <div class="links">
+      <a href="#product">Product</a><a href="#built">Client builds</a><a href="#academy">Academy</a><a href="#aim">AIM OS</a><a href="#experience">Experience</a>
+    </div>
+    <a class="hire" href="mailto:hairul.azhar.ofc@gmail.com?subject=Opportunity%20for%20Hairul%20Azhar">Hire me</a>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
+
+  <div class="eyebrow reveal">Portfolio &middot; Forward-Deployed AI Engineer</div>
+  <h1 class="reveal">I build and ship <span class="grad">agentic AI</span><br>&mdash; and run it in production.</h1>
+  <div class="role reveal">Hairul Azhar Bin Abu Bakar &middot; AI Solutions Architect &middot; Founder</div>
+  <div class="contact reveal"><a href="mailto:hairul.azhar.ofc@gmail.com"><b>hairul.azhar.ofc@gmail.com</b></a> &middot; <a href="tel:+6580148456">+65 8014-8456</a> &middot; Singapore citizen (open to global relocation)<br>
+    <a href="https://www.linkedin.com/in/hairul-azhar-7095b9347" target="_blank" rel="noopener">linkedin.com/in/hairul-azhar-7095b9347</a> &middot; <a href="https://github.com/CybergigSG" target="_blank" rel="noopener">github.com/CybergigSG</a></div>
+  <div class="ctas reveal">
+    <a class="btn pri" href="mailto:hairul.azhar.ofc@gmail.com?subject=Opportunity%20for%20Hairul%20Azhar">Email me</a>
+    <a class="btn" href="assets/Hairul_Azhar_Resume.pdf" target="_blank" rel="noopener">Download résumé (PDF)</a>
+    <a class="btn" href="https://www.linkedin.com/in/hairul-azhar-7095b9347" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+  </div>
+  <div class="pills reveal">
+    <a class="pill" href="https://www.katalock.net" target="_blank" rel="noopener"><span class="dot"></span>katalock.net &mdash; live</a>
+    <a class="pill" href="https://www.katalock.net/academy" target="_blank" rel="noopener"><span class="dot"></span>katalock.net/academy &mdash; live</a>
+    <a class="pill" href="https://aimglobal.io" target="_blank" rel="noopener"><span class="dot"></span>aimglobal.io &mdash; live</a>
+    <a class="pill" href="https://www.igniseco.com" target="_blank" rel="noopener"><span class="dot"></span>igniseco.com &mdash; client build</a>
+    <a class="pill" href="https://www.tarotwithshilpa.com" target="_blank" rel="noopener"><span class="dot"></span>tarotwithshilpa.com &mdash; client build</a>
+  </div>
+
+  <div class="proof reveal">
+    <div><b>3</b><span>live AI products I architect &mdash; workspace, Academy, AIM OS</span></div>
+    <div><b>523</b><span>lessons across 20 phases of AI engineering I designed</span></div>
+    <div><b>2</b><span>client websites shipped with KatalockAi, plus AI video output</span></div>
+    <div><b>10+ yrs</b><span>running real operations before AI &mdash; resorts, logistics, retail</span></div>
+  </div>
+
+  <p class="lead reveal"><b>KatalockAi</b> is a live, global, multilingual agentic AI workspace I architect single-handedly &mdash; real orchestration and verification infrastructure, not a thin wrapper on someone else's API. The LLM is localised for India, Singapore and Indonesia. This is a tour of what I've built, what it has produced for real clients, and the curriculum I wrote to teach it.</p>
+  <div class="rule reveal"></div>
+
+  <!-- 01 -->
+  <div class="sec reveal" id="product">
+    <div class="sechead"><span class="secno">01</span><span class="sectitle">KatalockAi &mdash; a global agentic AI workspace</span></div>
+    <div class="underline"></div>
+  </div>
+  <div class="browser reveal" style="margin-top:16px">
+    <div class="bbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">katalock.net</span></div>
+    <div class="hp">
+      <div class="nav">
+        <span class="brand"><span class="km">K</span>Katalock<span class="ai">Ai</span></span>
+        <a>AI&nbsp;Solution</a><a>Skill&nbsp;Library</a><a class="cur">Academy</a><a>Verified&nbsp;AI</a><a>Trust</a><a>Pricing</a>
+        <span class="sp"></span><span class="b">English</span><span class="b">Download</span><span class="b dk">Sign up free</span>
+      </div>
+      <div class="body">
+        <span class="fp">Built for your market &middot; Works in your language</span>
+        <div class="kk">ONE AI WORKSPACE &middot; CHATS &middot; RESEARCHES &middot; BUILDS &middot; AUTOMATES</div>
+        <h3>Give it a task. Katalock gets it <span class="dn">DONE.</span></h3>
+        <div class="sub">One AI workspace that chats, researches, builds, and automates &mdash; in your language.</div>
+        <div class="tb">
+          <div class="ph">Give Katalock a task &mdash; draft it, research it, build it, automate it&hellip;</div>
+          <div class="row"><span class="chip">+</span><span class="chip">Deep research</span><span class="chip">K-Computer</span><span class="snd">&uarr;</span></div>
+        </div>
+        <div class="ex"><span class="chip">Draft a GST tax invoice</span><span class="chip">Write a Hari Raya WhatsApp offer</span><span class="chip">Research my competitors</span><span class="chip">Build me a landing page</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 -->
+  <div class="sec reveal">
+    <div class="sechead"><span class="secno">02</span><span class="sectitle">Global by design &mdash; the LLM, localised per market</span></div>
+    <div class="underline"></div>
+  </div>
+  <div class="markets reveal">
+    <div class="mcard"><div class="cbadge">IN</div><h4>India</h4><div class="bf">Built for India</div><div class="lg">English &middot; Hindi &middot; Kannada &middot; Tamil &middot; Telugu</div><div class="cu">Currency &middot; INR</div></div>
+    <div class="mcard"><div class="cbadge">SG</div><h4>Singapore</h4><div class="bf">Built for Singapore</div><div class="lg">English &middot; Bahasa Melayu &middot; Mandarin &middot; Tamil</div><div class="cu">Currency &middot; SGD</div></div>
+    <div class="mcard"><div class="cbadge">ID</div><h4>Indonesia</h4><div class="bf">Built for Indonesia</div><div class="lg">Bahasa Indonesia &middot; English</div><div class="cu">Currency &middot; IDR</div></div>
+  </div>
+  <div class="cap reveal">KatalockAi is global. India, Singapore and Indonesia are launch markets where model, language and currency are localised &mdash; more are being added.</div>
+
+  <!-- 03 -->
+  <div class="sec reveal">
+    <div class="sechead"><span class="secno">03</span><span class="sectitle">Real infrastructure, not a wrapper</span></div>
+    <div class="underline"></div>
+  </div>
+  <div class="grid">
+    <div class="card reveal"><div class="t"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M7 7l-3 6a3 3 0 0 0 6 0z"/><path d="M17 7l-3 6a3 3 0 0 0 6 0z"/></svg></span> K-Computer &mdash; cross-model verification</div>
+      <p>Fires multiple independent model passes, cross-checks them, reconciles disagreements, and returns one answer with a confidence level.</p>
+      <div class="mini"><div class="lbl">Verified answer</div>
+        <div class="verline"><span class="tick">&#10003;</span> 3 of 3 models agree on the core claim</div>
+        <div class="conf"><i></i></div><div class="confrow"><span>Confidence</span><span>High &middot; 92%</span></div>
+        <div class="tags"><span class="tag">Model A &#10003;</span><span class="tag">Model B &#10003;</span><span class="tag">Model C &#10003;</span><span class="tag">1 claim flagged</span></div></div></div>
+    <div class="card reveal"><div class="t"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2.5 5-5 2.5 2.5-5z"/></svg></span> Supervised browser automation</div>
+      <p>Operates a browser on the user's behalf, step by step &mdash; and pauses before any submit or payment for approval.</p>
+      <div class="mini"><div class="lbl">Action gate</div>
+        <div class="verline"><span class="idot"></span> Paused &mdash; awaiting approval before &ldquo;Submit payment&rdquo;</div>
+        <div class="seq"><span class="st">open &#10003;</span><span class="st">fill &#10003;</span><span class="st">review &#10003;</span><span class="st" style="background:rgba(240,180,41,.14);border-color:rgba(240,180,41,.35);color:#ffe3a6">submit &middot; hold</span></div></div></div>
+    <div class="card reveal"><div class="t"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="12" r="2"/><path d="M7 6h5a2 2 0 0 1 2 2v0"/><path d="M7 18h5a2 2 0 0 0 2-2v0"/></svg></span> Live workflow graph</div>
+      <p>Every build or agent run renders as a status-coloured dependency map &mdash; resolving in real time.</p>
+      <div class="mini"><div class="lbl">Run &middot; orchestration</div>
+        <div class="flow"><span class="node"><span class="s done"></span>Research</span><span class="arr">&rarr;</span><span class="node"><span class="s done"></span>Plan</span><span class="arr">&rarr;</span><span class="node"><span class="s run"></span>Build</span><span class="arr">&rarr;</span><span class="node"><span class="s wait"></span>Verify</span></div></div></div>
+    <div class="card reveal"><div class="t"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6"/><path d="M9 12h6"/><path d="M9 16h3"/></svg></span> Evidence-ledger CRM</div>
+      <p>Every field is marked green, amber or red by how well its sources agree &mdash; data integrity, not autocomplete.</p>
+      <div class="mini"><div class="led">
+        <div class="r"><span class="b g"></span><span class="f">Company</span><span class="v">Acme Clinics Pte Ltd</span></div>
+        <div class="r"><span class="b g"></span><span class="f">Website</span><span class="v">acmeclinics.sg</span></div>
+        <div class="r"><span class="b a"></span><span class="f">Headcount</span><span class="v">~40 (one source)</span></div>
+        <div class="r"><span class="b r"></span><span class="f">Email</span><span class="v">unconfirmed &mdash; needs review</span></div></div></div></div>
+    <div class="card reveal"><div class="t"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span> In-workspace code sandbox</div>
+      <p>Builds and runs code on a live dev server, publishes to a link, and pushes to GitHub &mdash; beside research and media.</p>
+      <div class="mini"><div class="lbl">Sandbox</div><div class="seq"><span class="st">build &#10003;</span><span class="st">run &middot; dev server &#10003;</span><span class="st">publish &#10003;</span><span class="st">push &rarr; GitHub &#10003;</span></div></div></div>
+    <div class="card reveal"><div class="t"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M10 3v3M14 3v3M10 18v3M14 18v3M3 10h3M3 14h3M18 10h3M18 14h3"/></svg></span> Its own model stack</div>
+      <p>Named model tiers (lucy, tara, stargazer, aim) on its own routing stack, with anti-hallucination governance across every agent &mdash; not a reseller of one API.</p>
+      <div class="mini"><div class="lbl">Governance</div><div class="verline">Anti-slop &middot; cross-model routing &middot; atomic wallet &middot; RLS on every table</div></div></div>
+  </div>
+
+  <div class="browser reveal" style="margin-top:18px">
+    <div class="bbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">katalock.net &middot; Katalock Studio</span></div>
+    <img src="assets/img/studio.jpg" alt="KatalockAi Studio visual workflow builder" loading="lazy">
+  </div>
+  <div class="cap reveal">KatalockAi Studio &mdash; the visual workflow builder: drag nodes (Text, Generate image/video/music, Agent, Tool/Action, Condition, Katalock Refiner, Vision-to-Prompt), wire them, see live credit cost, and run. Real, not a mockup.</div>
+
+  <!-- 04 -->
+  <div class="sec reveal" id="built">
+    <div class="sechead"><span class="secno">04</span><span class="sectitle">Built with KatalockAi &mdash; real output for real clients</span></div>
+    <div class="underline"></div>
+    <p class="secintro">The workspace is judged by what it ships. Below is <b>unedited output</b>: an AI-generated interior-staging video, and two production websites live on their own domains today.</p>
+  </div>
+
+  <div class="showreel reveal">
+    <div class="browser">
+      <div class="bbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">KatalockAi &middot; video generation</span></div>
+      <video src="assets/video/katalock-interior-staging.mp4" poster="assets/video/katalock-interior-staging-poster.jpg" muted loop playsinline autoplay preload="metadata" controls aria-label="KatalockAi-generated video: an empty room is progressively furnished into a finished living room"></video>
+    </div>
+    <div class="panel side">
+      <div class="lbl">AI video &middot; interior staging</div>
+      <h4 style="margin-top:6px">Empty shell &rarr; furnished living room, in one generation</h4>
+      <p>An 18-second, 1080p walkthrough generated in KatalockAi: the camera holds on a bare double-height room while furniture, joinery and lighting build in, consistent across frames.</p>
+      <p>The use case is property marketing &mdash; virtual staging for agents and developers without a shoot. It draws on my decade as a project director on fit-outs for Marina Bay Sands and Resorts World Sentosa.</p>
+      <div class="ba">
+        <figure><img src="assets/img/staging-before.jpg" alt="First frame: empty room" loading="lazy"><figcaption>0s &middot; empty</figcaption></figure>
+        <figure><img src="assets/img/staging-after.jpg" alt="Last frame: furnished living room" loading="lazy"><figcaption>18s &middot; staged</figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="sites">
+    <div class="browser site reveal">
+      <div class="bbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">igniseco.com</span></div>
+      <div class="view" data-src="https://www.igniseco.com">
+        <img src="assets/img/site-igniseco-full.jpg" alt="Ignis Eco website: India's plastic is India's oil. We convert it back." loading="lazy">
+        <span class="hint">Hover to scroll</span>
+      </div>
+      <div class="meta">
+        <h4>Ignis Eco &mdash; plastic-to-fuel venture</h4>
+        <p>Investor-facing story site for a Bengaluru pyrolysis company: the crisis, the process, the plant, team and FAQ, with a language switcher. Built in KatalockAi; I also lead the venture's investor relations and go-to-market.</p>
+        <div class="tags"><span class="tag">Investor narrative</span><span class="tag">Multilingual</span><span class="tag">Process explainer</span><span class="tag">Data-led copy</span></div>
+        <div class="acts"><a class="btn sm pri" href="https://www.igniseco.com" target="_blank" rel="noopener">Visit site &#8599;</a><button class="btn sm" type="button" data-live>Try it live here</button></div>
+      </div>
+    </div>
+    <div class="browser site reveal">
+      <div class="bbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">tarotwithshilpa.com</span></div>
+      <div class="view" data-src="https://www.tarotwithshilpa.com">
+        <img src="assets/img/site-tarot-full.jpg" alt="Tarot with Shilpa website: Ask what is on your mind." loading="lazy">
+        <span class="hint">Hover to scroll</span>
+      </div>
+      <div class="meta">
+        <h4>Tarot with Shilpa &mdash; AI reading product</h4>
+        <p>A working AI product, not a brochure: the visitor picks a reader persona and a spread, asks a question, and gets a reading in their own language. Freemium (3 free questions a month), sign-in, reviews, and a hand-off to a real reader.</p>
+        <div class="tags"><span class="tag">AI personas</span><span class="tag">Freemium metering</span><span class="tag">Multilingual</span><span class="tag">Auth</span></div>
+        <div class="acts"><a class="btn sm pri" href="https://www.tarotwithshilpa.com" target="_blank" rel="noopener">Visit site &#8599;</a><button class="btn sm" type="button" data-live>Try it live here</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="cap reveal">Screenshots captured from the live sites in October 2026. &ldquo;Try it live here&rdquo; loads the real site inside this page.</div>
+
+  <!-- 05 -->
+  <div class="sec reveal" id="academy">
+    <div class="sechead"><span class="secno">05</span><span class="sectitle">KatalockAi Academy &mdash; the curriculum I designed</span></div>
+    <div class="underline"></div>
+  </div>
+  <div class="acad reveal" style="margin-top:16px">
+    <p style="color:#c3cada;font-size:14px;margin:0 0 16px;max-width:780px">A full AI-engineering curriculum I architected and built inside the product: from the maths behind neural networks to agents running in production. <b style="color:#fff">523 lessons across 20 phases</b>, six role-based career routes, Professor Katalock reviewing every project against a rubric, and certificates with verifiable IDs. First 4 phases free.</p>
+    <div class="stats">
+      <div class="stat"><div class="big">20</div><div class="cap2">Phases</div></div>
+      <div class="stat"><div class="big">523</div><div class="cap2">Lessons</div></div>
+      <div class="stat"><div class="big">6</div><div class="cap2">Career routes</div></div>
+      <div class="stat"><div class="big">6</div><div class="cap2">Skill paths</div></div>
+      <div class="stat"><div class="big">17</div><div class="cap2">Capstones</div></div>
+    </div>
+
+    <div class="subh">The full path &mdash; 20 phases</div>
+    <div class="bands">
+      <div class="band"><div class="bh">Foundations &middot; free</div>
+        <div class="phz"><span class="n">00</span>Setup &amp; tooling<span class="bar"><i style="width:22%"></i></span><span class="c">12 lessons</span></div>
+        <div class="phz"><span class="n">01</span>Math foundations<span class="bar"><i style="width:41%"></i></span><span class="c">22 lessons</span></div>
+        <div class="phz"><span class="n">02</span>Machine learning fundamentals<span class="bar"><i style="width:33%"></i></span><span class="c">18 lessons</span></div>
+        <div class="phz"><span class="n">03</span>Deep learning core<span class="bar"><i style="width:24%"></i></span><span class="c">13 lessons</span></div>
+      </div>
+      <div class="band"><div class="bh">AI domains</div>
+        <div class="phz"><span class="n">04</span>Computer vision<span class="bar"><i style="width:52%"></i></span><span class="c">28 lessons</span></div>
+        <div class="phz"><span class="n">05</span>Natural language processing<span class="bar"><i style="width:54%"></i></span><span class="c">29 lessons</span></div>
+        <div class="phz"><span class="n">06</span>Speech &amp; audio<span class="bar"><i style="width:31%"></i></span><span class="c">17 lessons</span></div>
+        <div class="phz"><span class="n">07</span>Transformers deep dive<span class="bar"><i style="width:30%"></i></span><span class="c">16 lessons</span></div>
+        <div class="phz"><span class="n">08</span>Generative AI<span class="bar"><i style="width:28%"></i></span><span class="c">15 lessons</span></div>
+        <div class="phz"><span class="n">09</span>Reinforcement learning<span class="bar"><i style="width:22%"></i></span><span class="c">12 lessons</span></div>
+      </div>
+      <div class="band"><div class="bh">Large language models</div>
+        <div class="phz"><span class="n">10</span>LLMs from scratch<span class="bar"><i style="width:44%"></i></span><span class="c">24 lessons</span></div>
+        <div class="phz"><span class="n">11</span>LLM engineering &amp; RAG<span class="bar"><i style="width:31%"></i></span><span class="c">17 lessons</span></div>
+        <div class="phz"><span class="n">12</span>Multimodal AI<span class="bar"><i style="width:46%"></i></span><span class="c">25 lessons</span></div>
+      </div>
+      <div class="band"><div class="bh">Agents</div>
+        <div class="phz"><span class="n">13</span>Tools &amp; protocols<span class="bar"><i style="width:57%"></i></span><span class="c">31 lessons</span></div>
+        <div class="phz"><span class="n">14</span>Agent engineering<span class="bar"><i style="width:100%"></i></span><span class="c">54 lessons &middot; largest phase</span></div>
+        <div class="phz"><span class="n">15</span>Autonomous systems<span class="bar"><i style="width:41%"></i></span><span class="c">22 lessons</span></div>
+        <div class="phz"><span class="n">16</span>Multi-agent systems &amp; swarms<span class="bar"><i style="width:46%"></i></span><span class="c">25 lessons</span></div>
+      </div>
+      <div class="band"><div class="bh">Production &amp; safety</div>
+        <div class="phz"><span class="n">17</span>Infrastructure &amp; production<span class="bar"><i style="width:52%"></i></span><span class="c">28 lessons</span></div>
+        <div class="phz"><span class="n">18</span>Ethics, safety &amp; alignment<span class="bar"><i style="width:56%"></i></span><span class="c">30 lessons</span></div>
+        <div class="phz"><span class="n">19</span>Capstone projects<span class="bar"><i style="width:31%"></i></span><span class="c">17 capstones, each certified</span></div>
+      </div>
+    </div>
+
+    <div class="subh">Depth I wrote and can teach</div>
+    <div class="deep">
+      <div class="card"><div class="t"><span class="ic">&#9881;</span>Inference &amp; serving</div>
+        <p>Running LLMs in production at scale, and what each serving engine trades off.</p>
+        <div class="kw"><span>vLLM</span><span>SGLang</span><span>TensorRT-LLM</span><span>PagedAttention</span><span>RadixAttention</span><span>LMCache</span><span>Prefill/decode disaggregation</span><span>Karpenter</span><span>KAI scheduler</span></div></div>
+      <div class="card"><div class="t"><span class="ic">$</span>Cost &amp; quantization</div>
+        <p>Unit economics of inference: making a model cheaper without making it worse.</p>
+        <div class="kw"><span>AWQ</span><span>GPTQ</span><span>FP8</span><span>NVFP4</span><span>Speculative decoding</span><span>Model cascading</span><span>Batch APIs</span><span>Cost attribution</span></div></div>
+      <div class="card"><div class="t"><span class="ic">&#9878;</span>Safety &amp; alignment</div>
+        <p>How models are aligned, how alignment fails, and how to defend against it.</p>
+        <div class="kw"><span>SFT</span><span>RLHF</span><span>DPO / IPO / KTO</span><span>Constitutional AI</span><span>Reward hacking</span><span>Alignment faking</span></div></div>
+      <div class="card"><div class="t"><span class="ic">&#8644;</span>Agents &amp; protocols</div>
+        <p>Tool-using agent loops, how agents talk to each other, and how they're coordinated.</p>
+        <div class="kw"><span>MCP</span><span>Agent Skills</span><span>FIPA-ACL heritage</span><span>Orchestrator / handoff</span><span>Shared state</span><span>Swarms</span></div></div>
+      <div class="card"><div class="t"><span class="ic">&#10003;</span>Evaluation &amp; reliability</div>
+        <p>Measuring model behaviour and shipping it safely to live traffic.</p>
+        <div class="kw"><span>Eval sets &amp; baselines</span><span>RAG evaluation</span><span>Shadow traffic</span><span>Canary rollout</span><span>Release gates</span><span>Feedback loops</span></div></div>
+      <div class="card"><div class="t"><span class="ic">&Sigma;</span>First principles</div>
+        <p>The maths and models underneath it all, built from scratch rather than imported.</p>
+        <div class="kw"><span>Linear algebra</span><span>Perceptron</span><span>Backprop</span><span>RNN &rarr; Transformer</span><span>LLM from scratch</span><span>Speaker verification (EER)</span></div></div>
+    </div>
+
+    <div class="subh">Six career routes, built from current AI job descriptions</div>
+    <div class="rtable">
+      <div class="rrow"><div class="rn">R01</div><div class="rt">Customer AI Deployment</div><div class="rr">Forward-Deployed AI Engineer &middot; Field AI Engineer &middot; AI Solutions Engineer</div></div>
+      <div class="rrow"><div class="rn">R02</div><div class="rt">Developer Experience &amp; Education</div><div class="rr">AI Developer Relations Engineer &middot; Developer Advocate</div></div>
+      <div class="rrow"><div class="rn">R03</div><div class="rt">AI Data Systems</div><div class="rr">AI Data Engineer &middot; ML Data Engineer &middot; Retrieval Engineer</div></div>
+      <div class="rrow"><div class="rn">R04</div><div class="rt">Agent Systems Engineering</div><div class="rr">Agent Systems Engineer &middot; Agentic AI Engineer</div></div>
+      <div class="rrow"><div class="rn">R05</div><div class="rt">LLM Product Engineering</div><div class="rr">Applied AI Engineer &middot; LLM Engineer &middot; AI Product Engineer</div></div>
+      <div class="rrow"><div class="rn">R06</div><div class="rt">AI Evaluation &amp; Reliability</div><div class="rr">AI Evaluation Engineer &middot; ML Site Reliability Engineer</div></div>
+    </div>
+
+    <div class="subh">Skill paths &amp; certification prep</div>
+    <div class="paths">
+      <span class="route hot">Model Context Protocol (MCP)</span><span class="route hot">Agent Skills Engineering</span>
+      <span class="route">Agent-Assisted Engineering</span><span class="route">Building &amp; Deploying AI Applications</span>
+      <span class="route">Software Engineering Fundamentals</span><span class="route">Product Judgment &amp; Delivery</span>
+      <span class="route">Claude certification prep &middot; 4 tracks</span><span class="route">MCP Associate prep</span>
+    </div>
+
+    <div class="browser" style="margin-top:24px">
+      <div class="bbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">katalock.net/academy</span></div>
+      <img src="assets/img/academy-landing.jpg" alt="KatalockAi Academy landing" loading="lazy">
+    </div>
+    <div class="cap">The Academy landing &mdash; positioned around how AI is reshaping work, backed by cited data, with the full 20-phase path.</div>
+
+    <div class="profshot">
+      <div class="txt">
+        <div class="who">The moat &middot; Professor Katalock</div>
+        <p><b style="color:#fff">Professor Katalock</b> is a Socratic AI mentor embedded in every lesson. It doesn't dump content &mdash; it teaches step by step, checks understanding, reviews the student's code, flags edge cases, and reveals the full solution only after the student has tried.</p>
+        <p>It teaches from the lesson material rather than video, so updating a lesson updates the teaching. And every student <b style="color:#fff">experiences the product's depth firsthand</b> &mdash; they come for the Academy, they stay for the workspace.</p>
+      </div>
+      <div class="fig"><div class="shotwrap"><img src="assets/img/lesson-professor.jpg" alt="Lesson with Professor Katalock" loading="lazy"><div class="c">A real lesson &mdash; speaker verification (EER) &mdash; with the &ldquo;Learn this with Professor Katalock&rdquo; tutor and a from-scratch architecture diagram.</div></div></div>
+    </div>
+
+    <div class="galh">Inside the curriculum</div>
+    <div class="gal">
+      <div class="shotwrap"><img src="assets/img/capstones.jpg" alt="Capstone projects" loading="lazy"><div class="c">Phase 19 &middot; Capstone projects &mdash; portfolio-grade builds, each earning its own verifiable certificate.</div></div>
+      <div class="shotwrap"><img src="assets/img/phase17-infra.jpg" alt="Infrastructure and production" loading="lazy"><div class="c">Phase 17 &middot; Infrastructure &amp; production &mdash; build tracks plus capstones like a GitHub issue-to-PR agent.</div></div>
+      <div class="shotwrap"><img src="assets/img/project-review.jpg" alt="Projects reviewed by Professor Katalock" loading="lazy"><div class="c">Projects graded by Professor Katalock against a rubric, then a final exam and a certificate with a verifiable ID.</div></div>
+      <div class="shotwrap"><img src="assets/img/phase16-multiagent.jpg" alt="Multi-agent systems" loading="lazy"><div class="c">Phase 16 &middot; Multi-agent systems &amp; swarms &mdash; one of 20 phases, first principles to shipped agents.</div></div>
+    </div>
+  </div>
+
+  <!-- 06 -->
+  <div class="sec reveal" id="aim">
+    <div class="sechead"><span class="secno">06</span><span class="sectitle">AIM OS &mdash; a governed operating system for agents</span></div>
+    <div class="underline"></div>
+  </div>
+  <div class="panel reveal" style="margin-top:16px">
+    <div class="kpis">
+      <div><b>50+</b><span>Integrated apps</span></div>
+      <div><b>108</b><span>API endpoints</span></div>
+      <div><b>27+</b><span>Autonomous agents</span></div>
+      <div><b>~80</b><span>Database tables</span></div>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="t">QGov &middot; Sentinel &middot; killswitch</div><p>A policy engine decides what agents may do, a safety monitor watches what they actually do, and a founder killswitch stops everything if they cross a boundary.</p></div>
+      <div class="card"><div class="t">Nexus Hub orchestration</div><p>Intent routing across agents, a pg-boss async job queue with automatic retries, and offline-first real-time collaboration on Yjs CRDTs.</p></div>
+    </div>
+    <div class="ctas" style="margin-top:14px"><a class="btn sm" href="https://aimglobal.io" target="_blank" rel="noopener">aimglobal.io &#8599;</a></div>
+  </div>
+
+  <!-- 07 -->
+  <div class="sec reveal" id="experience">
+    <div class="sechead"><span class="secno">07</span><span class="sectitle">Experience &mdash; operations first, then AI</span></div>
+    <div class="underline"></div>
+  </div>
+  <div class="bridge reveal">Forward-deployed work is half engineering, half operations. I spent ten years accountable for budgets, SLAs and on-site delivery before writing agents &mdash; so I build AI the way operators need it: verified, gated, and recoverable.</div>
+  <div class="tl reveal">
+    <div class="job"><div class="jh"><div class="jt">AI Platform Architect &amp; Co-Founder <span>&middot; KatalockAi</span></div><div class="jd">2026 &ndash; present</div></div>
+      <p>Own backend architecture, agent orchestration and infrastructure for the workspace. Built K-Computer verification, gated browser automation, the evidence-ledger CRM, the code sandbox, and an atomic credit wallet behind row-level security. Delivered done-for-you AI for SMEs: multilingual voice desks, social storefronts, automated hiring.</p></div>
+    <div class="job"><div class="jh"><div class="jt">Architect &amp; Founder <span>&middot; KatalockAi Academy</span></div><div class="jd">2026 &ndash; present</div></div>
+      <p>Designed the 20-phase, 523-lesson curriculum, six career routes, and Professor Katalock, the Socratic tutor that reviews student code against rubrics.</p></div>
+    <div class="job"><div class="jh"><div class="jt">Founder &amp; AI Platform Architect <span>&middot; AIM OS (aimglobal.io)</span></div><div class="jd">2023 &ndash; present</div></div>
+      <p>Architected a governed agent OS: 50+ apps, 108 endpoints, 27+ agents, with QGov, Sentinel and Nexus Hub.</p></div>
+    <div class="job"><div class="jh"><div class="jt">Co-Founder, IR &amp; GTM <span>&middot; Ignis Eco (igniseco.com)</span></div><div class="jd">2026 &ndash; present</div></div>
+      <p>Investor relations, seed-stage capital structuring and go-to-market for a plastic-to-fuel venture in Tamil Nadu and Bengaluru. Built its website with KatalockAi.</p></div>
+    <div class="job ops"><div class="jh"><div class="jt">Logistics Technology Operations <span>&middot; GOGOVAN Singapore (GOGOX)</span></div><div class="jd">Jul &ndash; Sep 2024</div></div>
+      <p>Ran enterprise logistics technology for IKEA Singapore: <b>99.8% on-time</b> across 5,000+ daily orders, incident resolution <b>25% faster</b>.</p></div>
+    <div class="job ops"><div class="jh"><div class="jt">Co-Founder &amp; Operations Director <span>&middot; Freda'D / DGCC Investment</span></div><div class="jd">2014 &ndash; 2024</div></div>
+      <p>Grew a bootstrapped fragrance business from $500 to a profitable international company supplying luxury hotels in Asia and the Middle East: <b>25% YoY growth</b>, automation that cut overhead <b>30%</b>.</p></div>
+    <div class="job ops"><div class="jh"><div class="jt">Project Director <span>&middot; HH Design / Interior Producer</span></div><div class="jd">2010 &ndash; 2020</div></div>
+      <p>Delivered integrated-resort fit-outs including <b>Marina Bay Sands Casino</b> and <b>Resorts World Sentosa</b>, on $500K&ndash;$5M budgets, with timelines improved 15%.</p></div>
+  </div>
+
+  <!-- 08 -->
+  <div class="sec reveal">
+    <div class="sechead"><span class="secno">08</span><span class="sectitle">Stack &amp; credentials</span></div>
+    <div class="underline"></div>
+  </div>
+  <div class="two reveal" style="margin-top:16px">
+    <div class="panel">
+      <div class="lbl" style="margin-bottom:10px">AI &amp; agentic engineering</div>
+      <div class="kw"><span>Multi-agent orchestration</span><span>Cross-model verification</span><span>RAG</span><span>MCP</span><span>Knowledge distillation</span><span>Quantization</span><span>Anti-hallucination governance</span><span>Pinecone</span><span>Chroma</span></div>
+      <div class="lbl" style="margin:16px 0 10px">Full-stack &amp; infrastructure</div>
+      <div class="kw"><span>Python</span><span>TypeScript</span><span>React / Next.js</span><span>Node.js</span><span>FastAPI / Django</span><span>PostgreSQL / Supabase</span><span>Redis</span><span>Docker / Kubernetes</span><span>AWS / GCP</span><span>Terraform</span><span>Stripe</span></div>
+    </div>
+    <div class="panel">
+      <ul class="list">
+        <li><b>MSc Computer Science</b> &mdash; Heriot-Watt University (expected 2028)</li>
+        <li><b>Diploma, Architectural Technology</b> &mdash; Singapore Polytechnic</li>
+        <li><b>IBM Full Stack Software Developer</b> Professional Certificate (2024)</li>
+        <li><b>Google AI &amp; Machine Learning</b> Professional Certificate (2024)</li>
+        <li><b>Google Cybersecurity</b> Professional Certificate (2024)</li>
+        <li><b>Languages</b> &mdash; English, Malay</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cta reveal" id="contact">
+    <h2>Looking for someone to put AI in front of real customers?</h2>
+    <p>I'm open to forward-deployed, solutions and applied AI engineering roles, in Singapore or anywhere globally. Available immediately or on two weeks' notice.</p>
+    <div class="ctas"><a class="btn pri" href="mailto:hairul.azhar.ofc@gmail.com?subject=Opportunity%20for%20Hairul%20Azhar">hairul.azhar.ofc@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/hairul-azhar-7095b9347" target="_blank" rel="noopener">LinkedIn &#8599;</a><a class="btn" href="assets/Hairul_Azhar_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a></div>
+  </div>
+
+  <footer>
+    <div>Hairul Azhar Bin Abu Bakar &middot; Forward-Deployed AI Engineer</div>
+    <div><a href="https://www.katalock.net" target="_blank" rel="noopener">katalock.net</a> &middot; <a href="https://www.katalock.net/academy" target="_blank" rel="noopener">katalock.net/academy</a> &middot; <a href="https://aimglobal.io" target="_blank" rel="noopener">aimglobal.io</a></div>
+  </footer>
+  <div class="note">Katalock Studio, all KatalockAi Academy panels, the client-site captures and the video are real product output. The remaining workspace panels (homepage, markets, feature cards) are styled representations &mdash; see the live product at katalock.net.</div>
+
+</div>
+<script>
+  document.documentElement.classList.add('js');
+  addEventListener('DOMContentLoaded', function(){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=((i%6)*55)+'ms'; io.observe(el); });
+    document.querySelectorAll('.stat .big').forEach(function(el){
+      var t=el.textContent.trim(); if(!/^\d+$/.test(t)) return;
+      var end=parseInt(t,10), start=null, dur=1100;
+      function step(ts){ if(!start)start=ts; var p=Math.min((ts-start)/dur,1); el.textContent=Math.round(p*end); if(p<1)requestAnimationFrame(step); }
+      var o2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){requestAnimationFrame(step);o2.unobserve(e.target);}})},{threshold:.5});
+      o2.observe(el);
+    });
+    // Swap a client-site screenshot for the real site in an iframe, on request.
+    document.querySelectorAll('[data-live]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var view = btn.closest('.site').querySelector('.view');
+        var frame = view.querySelector('iframe');
+        if(frame){ frame.remove(); view.querySelector('img').style.display=''; view.querySelector('.hint').style.display=''; btn.textContent='Try it live here'; return; }
+        frame = document.createElement('iframe');
+        frame.src = view.dataset.src; frame.loading='lazy'; frame.title='Live preview of '+view.dataset.src;
+        frame.setAttribute('sandbox','allow-scripts allow-same-origin allow-forms allow-popups');
+        view.querySelector('img').style.display='none'; view.querySelector('.hint').style.display='none';
+        view.appendChild(frame); btn.textContent='Show screenshot';
+      });
+    });
+    // Respect reduced motion for the showreel.
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches){ var v=document.querySelector('.showreel video'); if(v){ v.removeAttribute('autoplay'); v.pause(); } }
+  });
+</script>
+</body>
+</html>
