@@ -60,6 +60,34 @@ svg{display:block}
   @keyframes sigfade{to{opacity:1}}
   @keyframes sigdraw{to{stroke-dashoffset:0}}
 }
+.kc{display:grid;grid-template-columns:1fr 1.15fr;gap:16px;margin-top:18px}
+.kc .panel h4{margin:6px 0 8px;font-size:18px;letter-spacing:-.01em}
+.kc .panel p{color:#c3cada;font-size:13.5px;margin:0 0 10px}
+.kc .live{border-color:rgba(47,211,154,.35)}
+.kc .badge{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:4px 10px}
+.kc .badge.on{color:#9ff0cf;background:rgba(47,211,154,.12);border:1px solid rgba(47,211,154,.35)}
+.kc .badge.next{color:#ffd9b0;background:rgba(246,133,31,.12);border:1px solid rgba(246,133,31,.4)}
+.kc ul{margin:4px 0 0;padding-left:18px}
+.kc li{color:#c3cada;font-size:13px;margin:6px 0}
+.kc li::marker{color:var(--saffron)}
+.pyr{display:flex;flex-direction:column;align-items:center;gap:6px;margin:14px 0 6px}
+.tier{position:relative;border-radius:10px;padding:10px 14px;text-align:center;border:1px solid rgba(246,133,31,.35);background:linear-gradient(180deg,rgba(246,133,31,.16),rgba(246,133,31,.05))}
+.tier b{display:block;font-size:13.5px;color:#fff}
+.tier span{display:block;font-size:11.5px;color:#c3cada;margin-top:2px}
+.tier .esc{position:absolute;right:-26px;top:50%;transform:translateY(-50%);color:var(--saffron2);font-size:14px}
+.tier.t4{width:46%;background:linear-gradient(180deg,rgba(255,179,71,.3),rgba(246,133,31,.12));border-color:rgba(255,179,71,.6)}
+.tier.t3{width:64%}.tier.t2{width:82%}.tier.t1{width:100%}
+.queen{display:flex;gap:10px;align-items:flex-start;margin-top:12px;font-size:12.8px;color:#c3cada;border:1px dashed rgba(255,255,255,.18);border-radius:10px;padding:10px 12px}
+.queen i{font-style:normal;font-size:18px;line-height:1}
+.targets{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.targets span{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:5px 10px;color:#dfe4f0}
+.targets span b{color:var(--saffron2)}
+.tnote{font-size:11.5px;color:var(--muted);margin-top:10px}
+.moat{margin-top:16px;display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+.moat blockquote{margin:0;font-size:17px;line-height:1.45;color:#fff;font-weight:600}
+.moat blockquote b{color:var(--saffron2)}
+.moat .signed{display:flex;align-items:center;gap:12px;margin-top:12px;font-size:12px;color:var(--muted)}
+.moat .signed img{height:40px;width:auto}
 .founder{display:grid;grid-template-columns:1.35fr 1fr;gap:16px;margin-top:18px}
 .letter{padding:24px}
 .letter blockquote{margin:0;font-size:21px;line-height:1.3;font-weight:700;letter-spacing:-.01em;color:#fff}
@@ -331,6 +359,8 @@ img.zoom{cursor:zoom-in}
   html{scroll-behavior:auto}
 }
 @media (max-width:860px){
+  .kc,.moat{grid-template-columns:1fr}
+  .tier .esc{display:none}
   .founder{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
   .matrix{grid-template-columns:1fr 1fr}
@@ -376,7 +406,7 @@ img.zoom{cursor:zoom-in}
   <circle class="sig-dot" cx="457.6" cy="-14.2" r="4.2" fill="#f6851f"/>
 </svg></a>
     <div class="links">
-      <a href="#product">Product</a><a href="#why">Story</a><a href="#built">Client builds</a><a href="#academy">Academy</a><a href="#edu">Education</a><a href="#aim">AIM OS</a><a href="#experience">Experience</a><a href="resume.html">Résumé</a>
+      <a href="#product">Product</a><a href="#why">Story</a><a href="#kcomputer">K-Computer</a><a href="#built">Client builds</a><a href="#academy">Academy</a><a href="#edu">Education</a><a href="#aim">AIM OS</a><a href="#experience">Experience</a><a href="resume.html">Résumé</a>
     </div>
     <a class="hire" href="mailto:hairul.azhar.ofc@gmail.com?subject=Opportunity%20for%20Hairul%20Azhar">Contact</a>
   </div>
@@ -529,7 +559,7 @@ img.zoom{cursor:zoom-in}
       <p>Builds and runs code on a live dev server, publishes to a link, and pushes to GitHub, right beside research and media.</p>
       <div class="mini"><div class="lbl">Sandbox</div><div class="seq"><span class="st">build &#10003;</span><span class="st">run &middot; dev server &#10003;</span><span class="st">publish &#10003;</span><span class="st">push &rarr; GitHub &#10003;</span></div></div></div>
     <div class="card reveal"><div class="t"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M10 3v3M14 3v3M10 18v3M14 18v3M3 10h3M3 14h3M18 10h3M18 14h3"/></svg></span> Its own model stack</div>
-      <p>Named model tiers (lucy, tara, stargazer, aim) on its own routing stack, with anti-hallucination governance across every agent. Not a reseller of one API.</p>
+      <p>Named tiers (Lucy, Tara, Stargazer, AiM) behind one OpenAI-compatible API, so the models underneath can change without breaking anyone. Every response reports its own cost.</p>
       <div class="mini"><div class="lbl">Governance</div><div class="verline">Anti-slop &middot; cross-model routing &middot; atomic wallet &middot; RLS on every table</div></div></div>
   </div>
 
@@ -539,9 +569,60 @@ img.zoom{cursor:zoom-in}
   </div>
   <div class="cap reveal">KatalockAi Studio, the visual workflow builder: drag nodes (Text, Generate image/video/music, Agent, Tool/Action, Condition, Katalock Refiner, Vision-to-Prompt), wire them, see live credit cost, and run. Real, not a mockup.</div>
 
+  <!-- 05 -->
+  <div class="sec reveal" id="kcomputer">
+    <div class="sechead"><span class="secno">05</span><span class="sectitle">K-Computer: why I built it, and where it's going</span></div>
+    <div class="underline"></div>
+    <p class="secintro">Most AI products send every question to one expensive model and hope it's right. I couldn't afford that, and I didn't trust it either. So I built around it: <b>K-Computer</b> is the orchestration layer under Katalock Workspace, Code and Studio.</p>
+  </div>
+  <div class="kc">
+    <div class="panel live reveal">
+      <span class="badge on"><span class="dot"></span>Live today</span>
+      <h4>A panel, not a single model</h4>
+      <p>K-Computer asks several independent models from different labs the same question, checks the sources they cite, and has separate judges reconcile their answers.</p>
+      <ul>
+        <li>One answer with a score showing how strongly the models agreed, and a clear note wherever they didn't.</li>
+        <li>Runs automatically for questions about law, money, health and the news.</li>
+        <li>In Code, it reviews the apps people build before they ship them.</li>
+      </ul>
+      <div class="mini" style="margin-top:14px"><div class="lbl">Verified answer</div>
+        <div class="verline"><span class="tick">&#10003;</span> 3 of 3 models agree on the core claim</div>
+        <div class="conf"><i></i></div><div class="confrow"><span>Agreement</span><span>High</span></div>
+        <div class="tags"><span class="tag">Model A &#10003;</span><span class="tag">Model B &#10003;</span><span class="tag">Model C &#10003;</span><span class="tag">1 claim flagged</span></div></div>
+    </div>
+    <div class="panel reveal">
+      <span class="badge next">The next frontier &middot; in development</span>
+      <h4>The K-Computer pyramid</h4>
+      <p>A four-tier Mixture-of-Agents pyramid of specialist panels. A question starts at the base and climbs only as far as it needs to.</p>
+      <div class="pyr" aria-label="Four tiers, apex at the top">
+        <div class="tier t4"><b>AiM &middot; Apex board</b><span>Convenes every panel; called only when the tiers below deadlock</span></div>
+        <div class="tier t3"><b>Stargazer &middot; Deep reasoning</b><span>Complex code and multi-step workflows</span><i class="esc">&uarr;</i></div>
+        <div class="tier t2"><b>Tara &middot; Regional logic</b><span>Vernacular and local business rules for India, Indonesia and Singapore</span><i class="esc">&uarr;</i></div>
+        <div class="tier t1"><b>Lucy &middot; Fast routing</b><span>Routing, structuring and everyday work, quickly and at the lowest cost</span><i class="esc">&uarr;</i></div>
+      </div>
+      <div class="queen"><i>&#9813;</i><span>Every tier has its own arbiter, <b style="color:#fff">the Queen</b>, whose job is to force a consensus before anything moves up. Escalation only happens when consensus fails.</span></div>
+      <div class="targets">
+        <span><b>~85%</b> of tasks resolved at the base</span>
+        <span><b>~10x</b> lower running cost than sending everything to the top</span>
+        <span><b>Distillation flywheel</b>: apex answers train the smaller models</span>
+      </div>
+      <div class="tnote">The pyramid is in development. Figures are design targets, not measured results.</div>
+    </div>
+  </div>
+  <div class="moat">
+    <div class="panel reveal">
+      <div class="lbl">Why it matters</div>
+      <p style="color:#c3cada;font-size:13.5px;margin:8px 0 0">Models are rented and replaceable. The edge is the orchestration that decides which models to ask, how to weigh them and how to check them. Next is the flywheel: every hard problem the apex solves becomes training data for smaller models, so the base gets smarter and the pyramid gets cheaper over time. And a dedicated regional tier covers the vernacular and local business logic the big labs overlook.</p>
+    </div>
+    <div class="panel reveal">
+      <blockquote>&ldquo;I'm not an AI scientist with a PhD. I'm a founder who had to make AI <b>profitable</b> in Singapore, Indonesia and India without a frontier-sized API bill. K-Computer is how.&rdquo;</blockquote>
+      <div class="signed"><img src="assets/img/signature.svg" alt="Hairul Azhar signature"><span>Founder, KatalockAi</span></div>
+    </div>
+  </div>
+
   <!-- 04 -->
   <div class="sec reveal" id="built">
-    <div class="sechead"><span class="secno">05</span><span class="sectitle">Built with KatalockAi: real output for real clients</span></div>
+    <div class="sechead"><span class="secno">06</span><span class="sectitle">Built with KatalockAi: real output for real clients</span></div>
     <div class="underline"></div>
     <p class="secintro">The workspace is judged by what it ships. Below is <b>unedited output</b>: an AI-generated interior-staging video, and two production websites live on their own domains today.</p>
   </div>
@@ -595,7 +676,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 05 -->
   <div class="sec reveal" id="academy">
-    <div class="sechead"><span class="secno">06</span><span class="sectitle">KatalockAi Academy: the curriculum I designed</span></div>
+    <div class="sechead"><span class="secno">07</span><span class="sectitle">KatalockAi Academy: the curriculum I designed</span></div>
     <div class="underline"></div>
   </div>
   <div class="acad reveal" style="margin-top:16px">
@@ -708,7 +789,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 07 -->
   <div class="sec reveal" id="edu">
-    <div class="sechead"><span class="secno">07</span><span class="sectitle">Katalock for Education: IBTISAM teaches, students do the thinking</span></div>
+    <div class="sechead"><span class="secno">08</span><span class="sectitle">Katalock for Education: IBTISAM teaches, students do the thinking</span></div>
     <div class="underline"></div>
     <p class="secintro">AI can do homework in seconds. That's the problem: students paste the question, copy the answer and learn nothing, and teachers can't tell who really understands. So I built <b>IBTISAM</b>, an AI tutor for schools that explains, draws, quizzes and coaches, and never does the homework for them. Teachers see how well every student understands each topic.</p>
   </div>
@@ -746,7 +827,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 08 -->
   <div class="sec reveal" id="aim">
-    <div class="sechead"><span class="secno">08</span><span class="sectitle">AIM OS: a governed operating system for agents</span></div>
+    <div class="sechead"><span class="secno">09</span><span class="sectitle">AIM OS: a governed operating system for agents</span></div>
     <div class="underline"></div>
   </div>
   <div class="panel reveal" style="margin-top:16px">
@@ -765,7 +846,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 07 -->
   <div class="sec reveal" id="experience">
-    <div class="sechead"><span class="secno">09</span><span class="sectitle">Experience: operations first, then AI</span></div>
+    <div class="sechead"><span class="secno">10</span><span class="sectitle">Experience: operations first, then AI</span></div>
     <div class="underline"></div>
   </div>
   <div class="bridge reveal">Forward-deployed work is half engineering, half operations. I spent ten years accountable for budgets, SLAs and on-site delivery before writing agents, so I build AI the way operators need it: verified, gated, and recoverable.</div>
@@ -788,7 +869,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 08 -->
   <div class="sec reveal">
-    <div class="sechead"><span class="secno">10</span><span class="sectitle">Stack &amp; credentials</span></div>
+    <div class="sechead"><span class="secno">11</span><span class="sectitle">Stack &amp; credentials</span></div>
     <div class="underline"></div>
   </div>
   <div class="two reveal" style="margin-top:16px">
