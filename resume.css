@@ -63,6 +63,8 @@ h2:after{content:"";flex:1;height:1.5px;background:linear-gradient(90deg,var(--o
 .extra p{margin:2px 0}
 .extra b{color:var(--navy)}
 
+h2.pb{break-before:page}
+@media screen{h2.pb{margin-top:22px}}
 @page{size:A4;margin:11mm 12mm 14mm}
 @media print{
   html{background:#fff}

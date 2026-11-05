@@ -44,7 +44,7 @@
 <h2>Technical Skills &amp; Architecture Stack</h2>
 <div class="skills">
   <div class="lab">AI &amp; Agentic Engineering</div>
-  <div class="chips"><span class="hot">Agentic AI</span><span class="hot">Multi-Agent Orchestration</span><span class="hot">Cross-Model Verification</span><span class="hot">Mixture-of-Agents Orchestration</span><span>RAG</span><span>Model Context Protocol (MCP)</span><span>Knowledge Distillation</span><span>Quantization</span><span>Evaluation &amp; Release Gates</span><span>Human-in-the-Loop Approval</span><span>AI Safety &amp; Red-Teaming</span><span>AI Tutoring Guardrails</span><span>Vector DBs (Pinecone, Chroma)</span></div>
+  <div class="chips"><span class="hot">Agentic AI</span><span class="hot">Multi-Agent Orchestration</span><span class="hot">Cross-Model Verification</span><span class="hot">Mixture-of-Agents Orchestration</span><span>RAG</span><span>Model Context Protocol (MCP)</span><span>Knowledge Distillation</span><span>Quantization</span><span>Evaluation &amp; Release Gates</span><span>Human-in-the-Loop Approval</span><span>AI Safety &amp; Red-Teaming</span><span>AI Tutoring Guardrails</span><span>Voice AI &amp; Telephony (STT, TTS, Twilio)</span><span>Vector DBs (Pinecone, Chroma)</span></div>
   <div class="lab">Full-Stack &amp; Systems Infrastructure</div>
   <div class="chips"><span>Python</span><span>TypeScript</span><span>React / Next.js</span><span>Node.js / Express</span><span>FastAPI / Django</span><span>PostgreSQL / Supabase</span><span>Redis</span><span>Docker / Kubernetes</span><span>AWS / GCP</span><span>Terraform</span><span>Stripe</span></div>
 </div>
@@ -59,6 +59,8 @@
     <li>Built <b>K-Computer</b>, the orchestration layer under Workspace, Code and Studio: a live cross-model verification panel where models from different labs answer independently and separate judges reconcile one answer with an agreement score; it also reviews apps before they ship.</li>
     <li>Designing its next stage: a four-tier Mixture-of-Agents pyramid (Lucy, Tara, Stargazer, AiM) with per-tier arbiters, consensus-gated escalation and a distillation flywheel; design targets ~85% of tasks at the base, ~10x lower cost.</li>
     <li>Shipped an OpenAI-compatible API with named tiers and per-call cost, GST/UPI and currency localisation for three markets, payment-gated browser automation and a code sandbox that pushes to GitHub.</li>
+    <li>Built <b>Katalock Live</b>, spoken conversation with the workspace: replies stream out loud sentence by sentence after 0.7 s of quiet, the user can interrupt by talking, hands-free commands work in 8 languages, and tables and diagrams are talked through rather than read out; ten voices with selectable personality.</li>
+    <li>Built <b>voice agents</b> that answer a business's own phone number and WhatsApp: live interruptible calls streamed through the build server (silence detection, Whisper transcription, sentence-by-sentence speech), answers from a daily-refreshed website fact sheet, Google Calendar booking without double-booking, complaint logging, colleague checks and warm transfer to a human, billed per second.</li>
     <li>Human approval by design: no message, payment or post leaves without a person saying yes. Priced from &#8377;299/month to done-for-you agent teams.</li>
     <li>Delivered client AI products: <b>Tarot with Shilpa</b> (persona-based readings, freemium metering, human hand-off), the <b>Ignis Eco</b> investor site, AI video for property marketing, and SME bundles for clinics, retail, real estate and restaurants.</li>
   </ul>
@@ -112,19 +114,31 @@
   <ul><li>Delivered integrated-resort fit-outs including <b>Marina Bay Sands Casino</b> and <b>Resorts World Sentosa</b>, owning $500K&ndash;$5M budgets and improving timelines by 15%.</li></ul>
 </div>
 
-<h2>Featured Projects &amp; Systems</h2>
+<h2 class="pb">Featured Projects &amp; Systems</h2>
 <div class="pgrid">
   <div class="proj"><div class="ph"><span class="pt">1. KatalockAi Workspace</span><span class="pu">www.katalock.net</span></div>
-    <div class="stack">Next.js, Supabase, Composio, Docker, Stripe</div>
-    <p>Multilingual agent workspace on K-Computer verification, with gated browser automation and a code sandbox.</p></div>
-  <div class="proj"><div class="ph"><span class="pt">2. KatalockAi Academy</span><span class="pu">www.katalock.net/academy</span></div>
+    <div class="stack">Next.js, TypeScript, Supabase/PostgreSQL, Composio, Docker, Stripe</div>
+    <p>Multilingual agentic workspace for India and Southeast Asia: chat, deep research, app building with a security check, Studio workflows, agent crews and media, priced in INR, SGD, MYR and IDR.</p></div>
+  <div class="proj"><div class="ph"><span class="pt">2. K-Computer</span><span class="pu">Workspace &middot; Code &middot; Studio</span></div>
+    <div class="stack">Multi-model panel, source checks, judge reconciliation</div>
+    <p>Cross-model verification live in chat and Code, returning one answer with an agreement score. Next: a four-tier Mixture-of-Agents pyramid (design targets ~85% at the base, ~10x lower cost).</p></div>
+  <div class="proj"><div class="ph"><span class="pt">3. Katalock Live &amp; Voice Agents</span><span class="pu">www.katalock.net/voice</span></div>
+    <div class="stack">Twilio, WebSockets, Whisper, streaming TTS, Google Calendar</div>
+    <p>Interruptible spoken conversation with the workspace, plus AI receptionists on a business's own phone and WhatsApp that book, log complaints, check with colleagues and warm-transfer.</p></div>
+  <div class="proj"><div class="ph"><span class="pt">4. KatalockAi Academy</span><span class="pu">www.katalock.net/academy</span></div>
     <div class="stack">Next.js, Supabase, automated evaluation, rubric grading</div>
-    <p>523-lesson platform where an AI tutor reviews code and grades projects; certificates with verifiable IDs.</p></div>
-  <div class="proj"><div class="ph"><span class="pt">3. Tarot with Shilpa</span><span class="pu">www.tarotwithshilpa.com</span></div>
-    <div class="stack">Built with KatalockAi: LLM personas, multilingual UI, metering</div>
+    <p>20-phase, 523-lesson AI engineering platform where Professor Katalock reviews code and grades projects; certificates with verifiable IDs.</p></div>
+  <div class="proj"><div class="ph"><span class="pt">5. IBTISAM &middot; Katalock for Education</span><span class="pu">www.katalock.net/edu</span></div>
+    <div class="stack">Tutor guardrails, objective-level mastery, exam mode</div>
+    <p>AI tutor for schools that teaches without doing the homework, with teacher-set help levels, quizzes scored per objective and rubric marking drafts, in 11 languages.</p></div>
+  <div class="proj"><div class="ph"><span class="pt">6. AIM OS</span><span class="pu">aimglobal.io</span></div>
+    <div class="stack">Python, Node.js, PostgreSQL, Redis, Docker, Kubernetes, Yjs</div>
+    <p>Governed agent operating system: 50+ apps, 108 API endpoints, 27+ agents, with the QGov policy engine, Sentinel safety monitor and Nexus Hub orchestration.</p></div>
+  <div class="proj"><div class="ph"><span class="pt">7. Tarot with Shilpa</span><span class="pu">www.tarotwithshilpa.com</span></div>
+    <div class="stack">Built with KatalockAi: LLM personas, multilingual UI, auth, metering</div>
     <p>Consumer AI reading app with reader personas, spreads, a monthly free tier and escalation to a human reader.</p></div>
-  <div class="proj"><div class="ph"><span class="pt">4. WorkflowGenius</span><span class="pu">github.com/CybergigSG/WorkflowGenius</span></div>
-    <div class="stack">Python, RAG, Pinecone, React, AWS Lambda</div>
+  <div class="proj"><div class="ph"><span class="pt">8. WorkflowGenius</span><span class="pu">github.com/CybergigSG/WorkflowGenius</span></div>
+    <div class="stack">Python, RAG, Pinecone, React, AWS Lambda/EC2</div>
     <p>Enterprise RAG pipeline processing 10,000+ daily transactions at 99.5% uptime, cutting admin workload 40%.</p></div>
 </div>
 
@@ -139,8 +153,8 @@
   <div>
     <h2>Professional Certifications</h2>
     <ul class="blist">
-      <li><b>IBM Full Stack Software Developer</b> (2024)</li>
-      <li><b>Google AI &amp; Machine Learning</b> (2024)</li>
+      <li><b>IBM Full Stack Software Developer</b> (2024): React, Node.js, Python, Django, Docker, Kubernetes, OpenShift</li>
+      <li><b>Google AI &amp; Machine Learning</b> (2024): generative AI for software development, Python data science</li>
       <li><b>Google Cybersecurity Professional Certificate</b> (2024)</li>
     </ul>
   </div>
