@@ -60,6 +60,28 @@ svg{display:block}
   @keyframes sigfade{to{opacity:1}}
   @keyframes sigdraw{to{stroke-dashoffset:0}}
 }
+.livegrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px;margin-top:18px;align-items:stretch}
+.lcard{border-radius:22px;border:1px solid var(--line);background:radial-gradient(120% 90% at 50% 30%,rgba(255,138,52,.10),transparent 60%),#0e1424;padding:18px 18px 16px;display:flex;flex-direction:column;align-items:center;gap:6px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.lcard .lt{font-weight:700;font-size:15px;letter-spacing:.2px}
+.lcard .lt i{font-style:normal;color:#ff8a34}
+.lcard .lsub{font-size:12px;color:var(--muted)}
+.lcard canvas{display:block;width:240px;height:240px}
+.lcard .lstat{font-size:14px;font-weight:600;min-height:20px}
+.lcard .lcap{font-size:14px;line-height:1.45;color:#eaeefb;text-align:center;min-height:42px;max-width:340px}
+.lcard .lheard{font-size:13px;color:var(--muted);text-align:center;min-height:20px;max-width:340px;font-style:italic}
+.lcard .lstop{margin-top:6px;border:none;background:#e5484d;color:#fff;border-radius:999px;padding:9px 24px;font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:8px;font-family:inherit;pointer-events:none}
+.lcard .lstop:before{content:"";width:9px;height:9px;border-radius:2px;background:#fff}
+.lcard .lx{position:absolute;top:8px;right:12px;color:var(--muted);font-size:20px}
+.lnote{font-size:11.5px;color:var(--muted);margin-top:8px;text-align:center}
+.flow2{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap;margin-top:12px}
+.flow2 .fbox{flex:1 1 150px;border:1px solid var(--line);border-radius:12px;padding:11px 12px;background:rgba(0,0,0,.18)}
+.flow2 .fbox b{display:block;font-size:13px;color:#fff;margin-bottom:3px}
+.flow2 .fbox span{font-size:12px;color:#c3cada;line-height:1.4;display:block}
+.flow2 .fbox.hot{border-color:rgba(246,133,31,.5);background:rgba(246,133,31,.08)}
+.flow2 .farr{align-self:center;color:var(--saffron2);font-size:18px}
+.actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.voicesrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.voicesrow span{font-size:12px;border:1px solid rgba(255,138,52,.35);background:rgba(255,138,52,.08);color:#ffd9b0;border-radius:999px;padding:4px 10px}
 .kc{display:grid;grid-template-columns:1fr 1.15fr;gap:16px;margin-top:18px}
 .kc .panel h4{margin:6px 0 8px;font-size:18px;letter-spacing:-.01em}
 .kc .panel p{color:#c3cada;font-size:13.5px;margin:0 0 10px}
@@ -68,6 +90,10 @@ svg{display:block}
 .kc .badge.on{color:#9ff0cf;background:rgba(47,211,154,.12);border:1px solid rgba(47,211,154,.35)}
 .kc .badge.next{color:#ffd9b0;background:rgba(246,133,31,.12);border:1px solid rgba(246,133,31,.4)}
 .kc ul{margin:4px 0 0;padding-left:18px}
+.kcl{margin:4px 0 0;padding-left:18px}
+.kcl li{color:#c3cada;font-size:13px;margin:7px 0}
+.kcl li::marker{color:var(--saffron)}
+.kcl li b{color:#fff}
 .kc li{color:#c3cada;font-size:13px;margin:6px 0}
 .kc li::marker{color:var(--saffron)}
 .pyr{display:flex;flex-direction:column;align-items:center;gap:6px;margin:14px 0 6px}
@@ -364,6 +390,8 @@ img.zoom{cursor:zoom-in}
   html{scroll-behavior:auto}
 }
 @media (max-width:860px){
+  .livegrid{grid-template-columns:1fr}
+  .flow2 .farr{display:none}
   .kc,.moat{grid-template-columns:1fr}
   .tier .esc{display:none}
   .founder{grid-template-columns:1fr}
@@ -414,7 +442,7 @@ img.zoom{cursor:zoom-in}
   <circle class="sig-dot" cx="457.6" cy="-14.2" r="4.2" fill="#f6851f"/>
 </svg></a>
     <div class="links">
-      <a href="#product">Product</a><a href="#why">Story</a><a href="#kcomputer">K-Computer</a><a href="#built">Client builds</a><a href="#academy">Academy</a><a href="#edu">Education</a><a href="#aim">AIM OS</a><a href="#experience">Experience</a><a href="resume.html">Résumé</a>
+      <a href="#product">Product</a><a href="#why">Story</a><a href="#kcomputer">K-Computer</a><a href="#voice">Voice</a><a href="#built">Client builds</a><a href="#academy">Academy</a><a href="#edu">Education</a><a href="#aim">AIM OS</a><a href="#experience">Experience</a><a href="resume.html">Résumé</a>
     </div>
     <a class="hire" href="mailto:hairul.azhar.ofc@gmail.com?subject=Opportunity%20for%20Hairul%20Azhar">Contact</a>
   </div>
@@ -634,9 +662,71 @@ img.zoom{cursor:zoom-in}
     </div>
   </div>
 
+  <!-- 06 -->
+  <div class="sec reveal" id="voice">
+    <div class="sechead"><span class="secno">06</span><span class="sectitle">Katalock Live and voice agents: talk to it, or let it answer your phone</span></div>
+    <div class="underline"></div>
+    <p class="secintro">Two ways to use Katalock out loud. <b>Katalock Live</b> is a spoken conversation with the workspace itself. <b>Voice agents</b> are AI receptionists that answer a business's own phone number and WhatsApp, book appointments and hand over to a human.</p>
+  </div>
+  <div class="livegrid">
+    <div class="reveal">
+      <div class="lcard" id="lcard" aria-label="Katalock Live demo">
+        <span class="lx" aria-hidden="true">&times;</span>
+        <div class="lt"><i>&#9679;</i> Katalock Live</div>
+        <div class="lsub">Talk, interrupt, or say goodbye</div>
+        <canvas id="lsphere" width="240" height="240" aria-hidden="true"></canvas>
+        <div class="lstat" id="lstat" role="status">Listening&hellip;</div>
+        <div class="lheard" id="lheard"></div>
+        <div class="lcap" id="lcap"></div>
+        <span class="lstop">Stop</span>
+      </div>
+      <div class="lnote">The sphere is Katalock's own drawing code running here. The conversation is a scripted demo.</div>
+    </div>
+    <div class="panel reveal">
+      <div class="lbl">Katalock Live</div>
+      <h4 style="margin:6px 0 8px;font-size:18px">A conversation, not a voice command box</h4>
+      <ul class="kcl">
+        <li><b>Fast to answer.</b> It replies after 0.7 seconds of quiet and starts speaking after the first sentence is written, not the whole reply.</li>
+        <li><b>Interruptible.</b> Talk over it or tap the card and it stops and listens, like a person would.</li>
+        <li><b>Hands-free.</b> &ldquo;Start&rdquo; presses the button on a plan, &ldquo;open storyboard&rdquo; opens that screen, &ldquo;goodbye&rdquo; ends it. In 8 languages.</li>
+        <li><b>Knows what not to read.</b> Tables, code and diagrams stay on screen, and it talks you through them instead of reading cells aloud.</li>
+        <li><b>Your voice, your tone.</b> Ten Katalock voices and a Friendly, Professional or Playful personality, saved to your account. The voice itself costs no credits.</li>
+      </ul>
+      <div class="voicesrow"><span>Maya</span><span>Lina</span><span>Suri</span><span>Nisa</span><span>Aira</span><span>Arif</span><span>Ravi</span><span>Kai</span><span>Dev</span><span>Hadi</span></div>
+    </div>
+  </div>
+
+  <div class="panel reveal" style="margin-top:16px">
+    <div class="lbl">Voice agents</div>
+    <h4 style="margin:6px 0 4px;font-size:18px">An AI receptionist on the business's own number</h4>
+    <p style="color:#c3cada;font-size:13.5px;margin:0">The owner gives an agent a role, a greeting, a voice, a language and a brain (Fast, Smart or Deep), pastes their website, and tests it hands-free in the browser. Then it answers real calls and WhatsApp.</p>
+    <div class="flow2">
+      <div class="fbox"><b>Caller</b><span>Phone call, WhatsApp message, voice note or WhatsApp call</span></div>
+      <div class="farr">&rarr;</div>
+      <div class="fbox"><b>Their Twilio number</b><span>Connected in a few clicks, or bought from inside Katalock</span></div>
+      <div class="farr">&rarr;</div>
+      <div class="fbox hot"><b>Katalock voice agent</b><span>Speaks in a Katalock voice, answers from the website fact sheet and knowledge</span></div>
+      <div class="farr">&rarr;</div>
+      <div class="fbox"><b>Into the workspace</b><span>Every call becomes a named chat, the caller lands on the CRM, the owner is notified</span></div>
+    </div>
+    <div class="actions">
+      <span class="route hot">Answers questions</span><span class="route hot">Books Google Calendar appointments</span><span class="route">Logs complaints</span><span class="route">Rings a colleague while the caller holds</span><span class="route">Warm transfer to a human</span><span class="route">Takes a message</span>
+    </div>
+    <div class="subh" style="margin-top:20px">How I engineered it</div>
+    <div class="deep">
+      <div class="card"><div class="t"><span class="ic">&#9889;</span>Live, interruptible calls</div><p>The call's audio streams to the build server, which detects when the caller stops, transcribes, and speaks the reply sentence by sentence. If the caller talks over it, the agent stops at once and listens.</p></div>
+      <div class="card"><div class="t"><span class="ic">&#127760;</span>The website as memory</div><p>It reads up to 40 pages, refreshes daily and only re-indexes pages that changed, then writes an editable fact sheet. When the answer isn't there, the agent says it isn't sure instead of guessing a price.</p></div>
+      <div class="card"><div class="t"><span class="ic">&#128197;</span>Bookings that don't clash</div><p>It checks free times, offers a few, reads the details back and books only after a clear yes. It never double-books.</p></div>
+      <div class="card"><div class="t"><span class="ic">&#128222;</span>Checks with the team</div><p>It can ring people only from an approved list, ask the question while the caller holds, and relay the answer. No answer in about 80 seconds and it offers to take a message.</p></div>
+      <div class="card"><div class="t"><span class="ic">&#129309;</span>Warm transfer</div><p>The human hears a short briefing on who is calling and why, presses 1 to take it, and the rest of the call is transcribed into the log.</p></div>
+      <div class="card"><div class="t"><span class="ic">$</span>Metered and capped</div><p>Credits are checked before a call starts, billed by the second at 2.5 a minute when it ends, with a 20-minute cap. Each line has its own secret webhook key.</p></div>
+    </div>
+    <div class="ctas" style="margin-top:16px"><a class="btn sm pri" href="https://www.katalock.net/voice" target="_blank" rel="noopener">Voice agents on katalock.net &#8599;</a><a class="btn sm" href="https://www.katalock.net/changelog" target="_blank" rel="noopener">November changelog &#8599;</a></div>
+  </div>
+
   <!-- 04 -->
   <div class="sec reveal" id="built">
-    <div class="sechead"><span class="secno">06</span><span class="sectitle">Built with KatalockAi: real output for real clients</span></div>
+    <div class="sechead"><span class="secno">07</span><span class="sectitle">Built with KatalockAi: real output for real clients</span></div>
     <div class="underline"></div>
     <p class="secintro">The workspace is judged by what it ships. Below is <b>unedited output</b>: an AI-generated interior-staging video, and two production websites live on their own domains today.</p>
   </div>
@@ -690,7 +780,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 05 -->
   <div class="sec reveal" id="academy">
-    <div class="sechead"><span class="secno">07</span><span class="sectitle">KatalockAi Academy: the curriculum I designed</span></div>
+    <div class="sechead"><span class="secno">08</span><span class="sectitle">KatalockAi Academy: the curriculum I designed</span></div>
     <div class="underline"></div>
   </div>
   <div class="acad reveal" style="margin-top:16px">
@@ -803,7 +893,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 07 -->
   <div class="sec reveal" id="edu">
-    <div class="sechead"><span class="secno">08</span><span class="sectitle">Katalock for Education: IBTISAM teaches, students do the thinking</span></div>
+    <div class="sechead"><span class="secno">09</span><span class="sectitle">Katalock for Education: IBTISAM teaches, students do the thinking</span></div>
     <div class="underline"></div>
     <p class="secintro">AI can do homework in seconds. That's the problem: students paste the question, copy the answer and learn nothing, and teachers can't tell who really understands. So I built <b>IBTISAM</b>, an AI tutor for schools that explains, draws, quizzes and coaches, and never does the homework for them. Teachers see how well every student understands each topic.</p>
   </div>
@@ -841,7 +931,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 08 -->
   <div class="sec reveal" id="aim">
-    <div class="sechead"><span class="secno">09</span><span class="sectitle">AIM OS: a governed operating system for agents</span></div>
+    <div class="sechead"><span class="secno">10</span><span class="sectitle">AIM OS: a governed operating system for agents</span></div>
     <div class="underline"></div>
   </div>
   <div class="panel reveal" style="margin-top:16px">
@@ -860,7 +950,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 07 -->
   <div class="sec reveal" id="experience">
-    <div class="sechead"><span class="secno">10</span><span class="sectitle">Experience: operations first, then AI</span></div>
+    <div class="sechead"><span class="secno">11</span><span class="sectitle">Experience: operations first, then AI</span></div>
     <div class="underline"></div>
   </div>
   <div class="bridge reveal">Forward-deployed work is half engineering, half operations. I spent ten years accountable for budgets, SLAs and on-site delivery before writing agents, so I build AI the way operators need it: verified, gated, and recoverable.</div>
@@ -883,7 +973,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 08 -->
   <div class="sec reveal">
-    <div class="sechead"><span class="secno">11</span><span class="sectitle">Stack &amp; credentials</span></div>
+    <div class="sechead"><span class="secno">12</span><span class="sectitle">Stack &amp; credentials</span></div>
     <div class="underline"></div>
   </div>
   <div class="two reveal" style="margin-top:16px">
@@ -998,6 +1088,53 @@ img.zoom{cursor:zoom-in}
     lb.querySelector('[data-close]').addEventListener('click', function(){ lb.close(); });
     lb.addEventListener('click', function(e){ if (e.target === lb) lb.close(); });
     lb.addEventListener('keydown', function(e){ if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
+
+    // Katalock Live demo: Katalock's own sphere (KatalockLive.tsx, LiveSphere) ported to plain JS,
+    // driven by a short scripted conversation. Paused when off screen; slow under reduced motion.
+    (function(){
+      var cv=document.getElementById('lsphere'); if(!cv||!cv.getContext) return;
+      var g=cv.getContext('2d'), size=240, dpr=Math.min(2,window.devicePixelRatio||1);
+      cv.width=size*dpr; cv.height=size*dpr; cv.style.width=size+'px'; cv.style.height=size+'px'; g.scale(dpr,dpr);
+      var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var N=620, pts=[]; for(var i=0;i<N;i++){var y=1-(i/(N-1))*2, r=Math.sqrt(1-y*y), th=i*2.399963; pts.push([Math.cos(th)*r,y,Math.sin(th)*r]);}
+      var SCRIPT=[
+        ['listening',2600,'',''],['thinking',1100,'What is 9% GST on a S$1,200 invoice?',''],
+        ['speaking',4200,'','9% of S$1,200 is S$108, so the invoice comes to S$1,308.'],
+        ['listening',2200,'',''],['thinking',900,'Open storyboard',''],['speaking',2400,'','Opening Storyboard for you.'],
+        ['listening',2000,'',''],['thinking',700,'Goodbye',''],['speaking',2000,'','Bye for now!']];
+      var LABEL={listening:'Listening\u2026',thinking:'Thinking\u2026',speaking:'Speaking \u00b7 talk or tap to interrupt'};
+      var stat=document.getElementById('lstat'), heard=document.getElementById('lheard'), cap=document.getElementById('lcap');
+      var step=0, stepT=0, last=0, ph='listening', t=0, sm=0, raf=0, onScreen=false;
+      function setStep(k){ step=k%SCRIPT.length; var s=SCRIPT[step]; ph=s[0]; stat.textContent=LABEL[ph];
+        if(s[2]) heard.textContent='\u201c'+s[2]+'\u201d';
+        if(ph==='listening'){heard.textContent='';cap.textContent='';} if(ph==='speaking') cap.textContent=s[3]; }
+      setStep(0);
+      function draw(ts){
+        if(!last) last=ts; var dt=ts-last; last=ts; stepT+=dt; if(stepT>SCRIPT[step][1]){stepT=0;setStep(step+1);}
+        t+=reduce?0.002:0.012;
+        var mic=ph==='listening'?0.25+0.2*Math.abs(Math.sin(t*3.1))*Math.abs(Math.sin(t*1.7)):0;
+        var synthetic=ph==='speaking'?0.25+0.2*Math.abs(Math.sin(t*7))*Math.abs(Math.sin(t*2.3)):0;
+        var target=ph==='speaking'?synthetic:ph==='listening'?mic*0.6:ph==='thinking'?0.12+0.08*Math.sin(t*4):0.05;
+        sm+=(target-sm)*0.25;
+        var W=size,cx=W/2,cy=W/2,R=W*0.29*(1+sm*0.18+0.02*Math.sin(t*1.6)),GR=Math.min(W/2,R*1.6);
+        g.clearRect(0,0,W,W);
+        var glow=g.createRadialGradient(cx,cy,R*0.2,cx,cy,GR);
+        glow.addColorStop(0,'rgba(255,138,52,'+(0.28+sm*0.35)+')'); glow.addColorStop(0.55,'rgba(255,94,98,'+(0.10+sm*0.15)+')'); glow.addColorStop(1,'rgba(255,122,24,0)');
+        g.fillStyle=glow; g.beginPath(); g.arc(cx,cy,GR,0,Math.PI*2); g.fill();
+        var ay=t*0.6, ax=0.35+Math.sin(t*0.3)*0.15, cyA=Math.cos(ay), syA=Math.sin(ay), cxA=Math.cos(ax), sxA=Math.sin(ax);
+        for(var k=0;k<N;k++){ var x0=pts[k][0],y0=pts[k][1],z0=pts[k][2];
+          var x=x0*cyA+z0*syA, z=-x0*syA+z0*cyA, y=y0*cxA-z*sxA; z=y0*sxA+z*cxA;
+          var wave=1+sm*0.14*Math.sin(y0*4+t*9)*Math.cos(x0*3-t*6);
+          var persp=1/(1.9-z*0.6), px=cx+x*R*wave*persp*1.25, py=cy+y*R*wave*persp*1.25, depth=(z+1)/2;
+          var hue=22+depth*18-sm*14;
+          g.fillStyle='hsla('+hue+',100%,'+(55+depth*15)+'%,'+(0.25+depth*0.7)+')';
+          g.beginPath(); g.arc(px,py,(0.6+depth*1.5)*(1+sm*0.4),0,Math.PI*2); g.fill(); }
+        if(ph==='listening'){ g.strokeStyle='rgba(255,138,52,'+(0.25+mic*0.5)+')'; g.lineWidth=2; g.beginPath(); g.arc(cx,cy,R*(1.32+mic*0.25),0,Math.PI*2); g.stroke(); }
+        raf=onScreen?requestAnimationFrame(draw):0;
+      }
+      draw(performance.now());
+      new IntersectionObserver(function(es){ onScreen=es[0].isIntersecting; if(onScreen&&!raf){last=0;raf=requestAnimationFrame(draw);} }).observe(cv);
+    })();
 
     // Play the launch video (muted) while it's on screen.
     var bragV = document.querySelector('.brag video');
