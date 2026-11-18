@@ -253,6 +253,11 @@ a.pill:hover{border-color:rgba(246,133,31,.5)}
 
 /* built with KatalockAi */
 .brag video{display:block;width:100%;aspect-ratio:16/9;background:#0f1320}
+.demos{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.demos figure{margin:0;display:flex;flex-direction:column}
+.demos video{display:block;width:100%;aspect-ratio:16/9;background:#0f1320}
+.demos figcaption{padding:13px 15px 15px;font-size:13px;color:#b9c0d4;line-height:1.5;border-top:1px solid var(--line)}
+.demos figcaption b{color:#fff}
 .showreel{display:grid;grid-template-columns:1.55fr 1fr;gap:16px;margin-top:18px;align-items:start}
 .showreel video{display:block;width:100%;aspect-ratio:16/9;background:#000;object-fit:cover}
 .showreel .side{padding:18px}
@@ -390,6 +395,7 @@ img.zoom{cursor:zoom-in}
   html{scroll-behavior:auto}
 }
 @media (max-width:860px){
+  .demos{grid-template-columns:1fr}
   .livegrid{grid-template-columns:1fr}
   .flow2 .farr{display:none}
   .kc,.moat{grid-template-columns:1fr}
@@ -490,6 +496,19 @@ img.zoom{cursor:zoom-in}
     <div class="bbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">KatalockAi &middot; launch video</span></div>
     <video src="assets/video/katalock-brag.mp4" poster="assets/video/katalock-brag-poster.jpg" muted loop playsinline controls preload="metadata" aria-label="KatalockAi launch video: one person, ten jobs; give it a task and Katalock gets it done, in your language; Studio stages a room; IBTISAM refuses to do homework; local words, verified work."></video>
   </div>
+  <div class="demos">
+    <figure class="browser reveal">
+      <div class="bbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">KatalockAi Code &middot; 56 s</span></div>
+      <video src="assets/video/katalock-code.mp4" poster="assets/video/katalock-code-poster.jpg" controls playsinline preload="metadata" aria-label="KatalockAi Code walkthrough: a cafe website built from one sentence, previewed live, edited, security-checked and published"></video>
+      <figcaption><b>Code: real apps and websites from a sentence.</b> One line becomes a working caf&eacute; site with table booking, previewed live on laptop and phone, edited in a real file editor, security-checked, then published or deployed to Netlify or GitHub Pages.</figcaption>
+    </figure>
+    <figure class="browser reveal">
+      <div class="bbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">KatalockAi Studio &middot; 63 s</span></div>
+      <video src="assets/video/katalock-studio.mp4" poster="assets/video/katalock-studio-poster.jpg" controls playsinline preload="metadata" aria-label="KatalockAi Studio walkthrough: a text to image to video workflow on a canvas producing a four-scene reel with music"></video>
+      <figcaption><b>Studio: a whole video campaign on one canvas.</b> Text, image and video nodes light up as they finish; one template makes four scenes and a music bed into a finished reel. App Mode turns the graph into a simple form, and automations run on their own.</figcaption>
+    </figure>
+  </div>
+  <div class="cap reveal">Unedited screen recordings of the live product, with sound.</div>
   <div class="browser reveal" style="margin-top:18px">
     <div class="bbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">katalock.net</span></div>
     <div class="hp">
@@ -1136,6 +1155,8 @@ img.zoom{cursor:zoom-in}
       new IntersectionObserver(function(es){ onScreen=es[0].isIntersecting; if(onScreen&&!raf){last=0;raf=requestAnimationFrame(draw);} }).observe(cv);
     })();
 
+    // Only one video with sound at a time: starting one pauses the others.
+    document.querySelectorAll('video').forEach(function(v){ v.addEventListener('play', function(){ document.querySelectorAll('video').forEach(function(o){ if(o!==v && !o.muted) o.pause(); }); }); });
     // Play the launch video (muted) while it's on screen.
     var bragV = document.querySelector('.brag video');
     if (bragV && !matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
