@@ -46,7 +46,7 @@ svg{display:block}
 /* top nav */
 .topnav{position:sticky;top:0;z-index:20;background:rgba(11,15,28,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .topnav .in{max-width:1020px;margin:0 auto;padding:11px 36px;display:flex;align-items:center;gap:18px}
-.topnav .links{display:flex;gap:16px;margin-left:auto;font-size:13px;flex-wrap:wrap}
+.topnav .links{display:flex;gap:12px;margin-left:auto;font-size:12.5px;flex-wrap:wrap}
 .topnav .links a{color:#c6cde0}
 .topnav .links a:hover{color:var(--saffron2)}
 .topnav .hire{background:linear-gradient(135deg,#ffb347,#f6851f);color:#0b0f1c;font-weight:700;border-radius:8px;padding:6px 12px;font-size:12.5px;white-space:nowrap}
@@ -253,6 +253,8 @@ a.pill:hover{border-color:rgba(246,133,31,.5)}
 
 /* built with KatalockAi */
 .brag video{display:block;width:100%;aspect-ratio:16/9;background:#0f1320}
+.aishah-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;align-items:start}
+.aishah-grid video{display:block;width:100%;aspect-ratio:1/1;background:#0f1320}
 .demos{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
 .demos figure{margin:0;display:flex;flex-direction:column}
 .demos video{display:block;width:100%;aspect-ratio:16/9;background:#0f1320}
@@ -395,6 +397,7 @@ img.zoom{cursor:zoom-in}
   html{scroll-behavior:auto}
 }
 @media (max-width:860px){
+  .aishah-grid{grid-template-columns:1fr}
   .demos{grid-template-columns:1fr}
   .livegrid{grid-template-columns:1fr}
   .flow2 .farr{display:none}
@@ -448,7 +451,7 @@ img.zoom{cursor:zoom-in}
   <circle class="sig-dot" cx="457.6" cy="-14.2" r="4.2" fill="#f6851f"/>
 </svg></a>
     <div class="links">
-      <a href="#product">Product</a><a href="#why">Story</a><a href="#kcomputer">K-Computer</a><a href="#voice">Voice</a><a href="#built">Client builds</a><a href="#academy">Academy</a><a href="#edu">Education</a><a href="#aim">AIM OS</a><a href="#experience">Experience</a><a href="resume.html">Résumé</a>
+      <a href="#product">Product</a><a href="#kcomputer">K-Computer</a><a href="#voice">Voice</a><a href="#chrome">Chrome</a><a href="#built">Clients</a><a href="#academy">Academy</a><a href="#edu">Education</a><a href="#aishah">A.i.Shah</a><a href="#aim">AIM OS</a><a href="#experience">Experience</a><a href="resume.html">Résumé</a>
     </div>
     <a class="hire" href="mailto:hairul.azhar.ofc@gmail.com?subject=Opportunity%20for%20Hairul%20Azhar">Contact</a>
   </div>
@@ -471,13 +474,15 @@ img.zoom{cursor:zoom-in}
     <a class="pill" href="https://www.katalock.net" target="_blank" rel="noopener"><span class="dot"></span>katalock.net &middot; live</a>
     <a class="pill" href="https://www.katalock.net/academy" target="_blank" rel="noopener"><span class="dot"></span>katalock.net/academy &middot; live</a>
     <a class="pill" href="https://www.katalock.net/edu" target="_blank" rel="noopener"><span class="dot"></span>katalock.net/edu &middot; live</a>
+    <a class="pill" href="https://a-i-shah-b6qgj.sprites.app/landing.html" target="_blank" rel="noopener"><span class="dot"></span>A.i.Shah &middot; live</a>
+    <a class="pill" href="https://chromewebstore.google.com/detail/katalock-for-chrome/bfckbhchfchofnapeaebgkibcijclgih" target="_blank" rel="noopener"><span class="dot"></span>Katalock for Chrome &middot; Web Store</a>
     <a class="pill" href="https://aimglobal.io" target="_blank" rel="noopener"><span class="dot"></span>aimglobal.io &middot; live</a>
     <a class="pill" href="https://www.igniseco.com" target="_blank" rel="noopener"><span class="dot"></span>igniseco.com &middot; client build</a>
     <a class="pill" href="https://www.tarotwithshilpa.com" target="_blank" rel="noopener"><span class="dot"></span>tarotwithshilpa.com &middot; client build</a>
   </div>
 
   <div class="proof reveal">
-    <div><b>4</b><span>live AI products I architect: workspace, Academy, Education, AIM OS</span></div>
+    <div><b>5</b><span>live AI products I architect: workspace, Academy, Education, A.i.Shah, AIM OS</span></div>
     <div><b>523</b><span>lessons across 20 phases of AI engineering I designed</span></div>
     <div><b>2</b><span>client websites shipped with KatalockAi, plus AI video output</span></div>
     <div><b>10+ yrs</b><span>running real operations before AI: resorts, logistics, retail</span></div>
@@ -743,9 +748,28 @@ img.zoom{cursor:zoom-in}
     <div class="ctas" style="margin-top:16px"><a class="btn sm pri" href="https://www.katalock.net/voice" target="_blank" rel="noopener">Voice agents on katalock.net &#8599;</a><a class="btn sm" href="https://www.katalock.net/changelog" target="_blank" rel="noopener">November changelog &#8599;</a></div>
   </div>
 
+  <!-- chrome -->
+  <div class="sec reveal" id="chrome">
+    <div class="sechead"><span class="secno">07</span><span class="sectitle">Katalock for Chrome: it works in your own tabs while you watch</span></div>
+    <div class="underline"></div>
+    <p class="secintro">A Chrome extension that brings Katalock into the tabs you share. It reads the page, moves a visible cursor, clicks and types while you watch, checks its work with a second model, and asks before anything is sent, booked or paid. Move your mouse and it stops at once.</p>
+  </div>
+  <div class="gal" style="margin-top:16px">
+    <div class="shotwrap reveal"><img class="zoom" src="assets/img/chrome-watch.jpg" alt="Katalock types a message into a contact form in the user's tab, with the approval card and its check in the side panel" loading="lazy"><div class="c">Katalock types in your tab while you watch. The send waits for approval, with a second model's check and its confidence.</div></div>
+    <div class="shotwrap reveal"><img class="zoom" src="assets/img/chrome-takeover.jpg" alt="The user moves the mouse and Katalock pauses, showing You have control and Hand back to Katalock" loading="lazy"><div class="c">Move your mouse and Katalock stops at once. Hand back and it carries on without typing anything twice.</div></div>
+    <div class="shotwrap reveal"><img class="zoom" src="assets/img/chrome-whatsapp.jpg" alt="Katalock replies in WhatsApp Web by the rules the user set for each contact" loading="lazy"><div class="c">WhatsApp Web: it replies by rules you agree for each contact, and holds the rest for you.</div></div>
+    <div class="shotwrap reveal"><img class="zoom" src="assets/img/chrome-calendar.jpg" alt="Saving a Google Calendar event, with the clash with another meeting flagged before approval" loading="lazy"><div class="c">Google Calendar: clashes and time zones are shown before you approve a booking.</div></div>
+  </div>
+  <div class="deep" style="margin-top:16px">
+    <div class="card reveal"><div class="t"><span class="ic">&#128737;</span>Nothing runs that wasn't shipped</div><p>The server sends actions as data, like &ldquo;click e12&rdquo;; the extension's own bundled code performs them. No code is fetched or evaluated.</p></div>
+    <div class="card reveal"><div class="t"><span class="ic">&#9995;</span>Approval on both sides</div><p>Sends, submits, bookings, payments and deletes are caught by the planner's flag and by the button's own label, and always stop for your yes.</p></div>
+    <div class="card reveal"><div class="t"><span class="ic">&#128274;</span>Private by default</div><p>Access to katalock.net only; every other site is granted when you share that tab. Passwords, card numbers and one-time codes are masked before anything leaves the page.</p></div>
+  </div>
+  <div class="ctas reveal" style="margin-top:14px"><a class="btn sm pri" href="https://chromewebstore.google.com/detail/katalock-for-chrome/bfckbhchfchofnapeaebgkibcijclgih" target="_blank" rel="noopener">Get it on the Chrome Web Store &#8599;</a></div>
+
   <!-- 04 -->
   <div class="sec reveal" id="built">
-    <div class="sechead"><span class="secno">07</span><span class="sectitle">Built with KatalockAi: real output for real clients</span></div>
+    <div class="sechead"><span class="secno">08</span><span class="sectitle">Built with KatalockAi: real output for real clients</span></div>
     <div class="underline"></div>
     <p class="secintro">The workspace is judged by what it ships. Below is <b>unedited output</b>: an AI-generated interior-staging video, and two production websites live on their own domains today.</p>
   </div>
@@ -799,7 +823,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 05 -->
   <div class="sec reveal" id="academy">
-    <div class="sechead"><span class="secno">08</span><span class="sectitle">KatalockAi Academy: the curriculum I designed</span></div>
+    <div class="sechead"><span class="secno">09</span><span class="sectitle">KatalockAi Academy: the curriculum I designed</span></div>
     <div class="underline"></div>
   </div>
   <div class="acad reveal" style="margin-top:16px">
@@ -912,7 +936,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 07 -->
   <div class="sec reveal" id="edu">
-    <div class="sechead"><span class="secno">09</span><span class="sectitle">Katalock for Education: IBTISAM teaches, students do the thinking</span></div>
+    <div class="sechead"><span class="secno">10</span><span class="sectitle">Katalock for Education: IBTISAM teaches, students do the thinking</span></div>
     <div class="underline"></div>
     <p class="secintro">AI can do homework in seconds. That's the problem: students paste the question, copy the answer and learn nothing, and teachers can't tell who really understands. So I built <b>IBTISAM</b>, an AI tutor for schools that explains, draws, quizzes and coaches, and never does the homework for them. Teachers see how well every student understands each topic.</p>
   </div>
@@ -952,9 +976,38 @@ img.zoom{cursor:zoom-in}
     <div class="ctas" style="margin-top:16px"><a class="btn sm pri" href="https://www.katalock.net/edu" target="_blank" rel="noopener">See it on katalock.net/edu &#8599;</a></div>
   </div>
 
+  <!-- aishah -->
+  <div class="sec reveal" id="aishah">
+    <div class="sechead"><span class="secno">11</span><span class="sectitle">A.i.Shah: a voice-first personal assistant, made for Dubai</span></div>
+    <div class="underline"></div>
+    <p class="secintro"><b>A.i.Shah</b> is my entry for the Create AI Agents Championship by Dubai Chamber Digital, in the Best Personal AI Agent category. You talk to it, and it does the work: email, calendar, bookings, WhatsApp, even your phone calls. It asks before anything is sent, paid or published. It began as a fork of Nod, n8n's open-source personal agent; I added the voice-first interface and built it out under Katalock AI.</p>
+  </div>
+  <div class="aishah-grid">
+    <div class="browser reveal brag">
+      <div class="bbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">A.i.Shah &middot; launch video</span></div>
+      <video src="assets/video/aishah-brag.mp4" poster="assets/video/aishah-brag-poster.jpg" muted loop playsinline controls preload="metadata" aria-label="A.i.Shah launch video: talk to it and it does the work; four characters in Dubai from morning to night; a WhatsApp message waits for approval, then sends; a phone caller books a consultation."></video>
+    </div>
+    <div class="panel reveal">
+      <div class="lbl">What it does</div>
+      <ul class="kcl">
+        <li><b>Talk, don't type.</b> Push to talk or hands-free. She answers at her first words and stops the moment you speak.</li>
+        <li><b>Four characters.</b> Aishah, Nabilah, Nawrah and Sulaiman, each with their own voice, animated clips and personality, on a living Dubai scene that follows the time of day.</li>
+        <li><b>Answers your phone.</b> On a Twilio number, in her voice. Callers can book a free slot within your rules and get a confirmation email.</li>
+        <li><b>WhatsApp, approval first.</b> It shows you the exact recipient and text, sends only after your yes, and watches for the reply.</li>
+        <li><b>Your apps.</b> Gmail, Google Calendar, Outlook, Slack, Notion, Drive and more, on your own accounts.</li>
+      </ul>
+      <div class="ctas" style="margin-top:14px"><a class="btn sm pri" href="https://a-i-shah-b6qgj.sprites.app/landing.html" target="_blank" rel="noopener">Try A.i.Shah live &#8599;</a></div>
+    </div>
+  </div>
+  <figure class="shotwrap reveal" style="margin:16px 0 0"><img class="zoom" src="assets/img/aishah-characters.jpg" alt="Aishah in the morning, Nabilah at noon, Nawrah in the evening and Sulaiman at night, each on the Dubai fountain walkway" loading="lazy"><div class="c">Aishah, Nabilah, Nawrah and Sulaiman: the real home screen, with Dubai in the morning, at noon, in the evening and at night.</div></figure>
+  <div class="gal" style="margin-top:16px">
+    <div class="shotwrap reveal"><img class="zoom" src="assets/img/aishah-approval.jpg" alt="The Needs you sheet: Send message to Metro Taxi on WhatsApp, with Approve and Cancel" loading="lazy" style="max-height:520px;object-fit:cover;object-position:bottom"><div class="c">&ldquo;Needs you&rdquo;: the exact WhatsApp message and recipient, waiting for Approve.</div></div>
+    <div class="shotwrap reveal"><img class="zoom" src="assets/img/aishah-call.jpg" alt="A live call log: a caller books a consultation and A.i.Shah confirms the booking and email" loading="lazy" style="max-height:520px;object-fit:cover;object-position:top"><div class="c">A caller books a consultation on the phone; the booking and confirmation email land in the call log.</div></div>
+  </div>
+
   <!-- 08 -->
   <div class="sec reveal" id="aim">
-    <div class="sechead"><span class="secno">10</span><span class="sectitle">AIM OS: a governed operating system for agents</span></div>
+    <div class="sechead"><span class="secno">12</span><span class="sectitle">AIM OS: a governed operating system for agents</span></div>
     <div class="underline"></div>
   </div>
   <div class="panel reveal" style="margin-top:16px">
@@ -973,7 +1026,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 07 -->
   <div class="sec reveal" id="experience">
-    <div class="sechead"><span class="secno">11</span><span class="sectitle">Experience: operations first, then AI</span></div>
+    <div class="sechead"><span class="secno">13</span><span class="sectitle">Experience: operations first, then AI</span></div>
     <div class="underline"></div>
   </div>
   <div class="bridge reveal">Forward-deployed work is half engineering, half operations. I spent ten years accountable for budgets, SLAs and on-site delivery before writing agents, so I build AI the way operators need it: verified, gated, and recoverable.</div>
@@ -996,7 +1049,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 08 -->
   <div class="sec reveal">
-    <div class="sechead"><span class="secno">12</span><span class="sectitle">Stack &amp; credentials</span></div>
+    <div class="sechead"><span class="secno">14</span><span class="sectitle">Stack &amp; credentials</span></div>
     <div class="underline"></div>
   </div>
   <div class="two reveal" style="margin-top:16px">
@@ -1037,7 +1090,7 @@ img.zoom{cursor:zoom-in}
       </div>
       <div class="cols">
         <div class="col"><span class="lbl">Contact</span><a href="mailto:hairul.azhar.ofc@gmail.com">hairul.azhar.ofc@gmail.com</a><a href="https://www.linkedin.com/in/hairul-azhar-7095b9347" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/CybergigSG" target="_blank" rel="noopener">GitHub</a><a href="resume.html">Résumé</a></div>
-        <div class="col"><span class="lbl">Products</span><a href="https://www.katalock.net" target="_blank" rel="noopener">KatalockAi</a><a href="https://www.katalock.net/academy" target="_blank" rel="noopener">KatalockAi Academy</a><a href="https://www.katalock.net/edu" target="_blank" rel="noopener">Katalock for Education</a><a href="https://aimglobal.io" target="_blank" rel="noopener">AIM OS</a></div>
+        <div class="col"><span class="lbl">Products</span><a href="https://www.katalock.net" target="_blank" rel="noopener">KatalockAi</a><a href="https://www.katalock.net/academy" target="_blank" rel="noopener">KatalockAi Academy</a><a href="https://www.katalock.net/edu" target="_blank" rel="noopener">Katalock for Education</a><a href="https://chromewebstore.google.com/detail/katalock-for-chrome/bfckbhchfchofnapeaebgkibcijclgih" target="_blank" rel="noopener">Katalock for Chrome</a><a href="https://a-i-shah-b6qgj.sprites.app/landing.html" target="_blank" rel="noopener">A.i.Shah</a><a href="https://aimglobal.io" target="_blank" rel="noopener">AIM OS</a></div>
         <div class="col"><span class="lbl">Client builds</span><a href="https://www.igniseco.com" target="_blank" rel="noopener">Ignis Eco</a><a href="https://www.tarotwithshilpa.com" target="_blank" rel="noopener">Tarot with Shilpa</a></div>
       </div>
     </div>
