@@ -46,7 +46,7 @@ svg{display:block}
 /* top nav */
 .topnav{position:sticky;top:0;z-index:20;background:rgba(11,15,28,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .topnav .in{max-width:1020px;margin:0 auto;padding:11px 36px;display:flex;align-items:center;gap:18px}
-.topnav .links{display:flex;gap:12px;margin-left:auto;font-size:12.5px;flex-wrap:wrap}
+.topnav .links{display:flex;gap:11px;margin-left:auto;font-size:12px;flex-wrap:wrap}
 .topnav .links a{color:#c6cde0}
 .topnav .links a:hover{color:var(--saffron2)}
 .topnav .hire{background:linear-gradient(135deg,#ffb347,#f6851f);color:#0b0f1c;font-weight:700;border-radius:8px;padding:6px 12px;font-size:12.5px;white-space:nowrap}
@@ -253,6 +253,13 @@ a.pill:hover{border-color:rgba(246,133,31,.5)}
 
 /* built with KatalockAi */
 .brag video{display:block;width:100%;aspect-ratio:16/9;background:#0f1320}
+.paper{display:grid;grid-template-columns:230px 1fr;gap:18px;margin-top:16px;align-items:start}
+.paper-cover{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 40px rgba(0,0,0,.45);background:#fff;transition:transform .25s ease}
+.paper-cover:hover{transform:translateY(-4px)}
+.paper-cover img{display:block;width:100%}
+.paper .rq{margin:12px 0 4px;padding:12px 14px;border-left:3px solid var(--saffron);background:rgba(246,133,31,.07);border-radius:0 10px 10px 0;color:#eaeefb;font-size:13.5px;line-height:1.5}
+.paper .rq .lbl{display:block;margin-bottom:4px}
+.paper-note{font-size:12px;color:var(--muted);margin:12px 0 0}
 .aishah-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;align-items:start}
 .aishah-grid video{display:block;width:100%;aspect-ratio:1/1;background:#0f1320}
 .demos{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
@@ -397,6 +404,8 @@ img.zoom{cursor:zoom-in}
   html{scroll-behavior:auto}
 }
 @media (max-width:860px){
+  .paper{grid-template-columns:1fr}
+  .paper-cover{max-width:240px}
   .aishah-grid{grid-template-columns:1fr}
   .demos{grid-template-columns:1fr}
   .livegrid{grid-template-columns:1fr}
@@ -451,7 +460,7 @@ img.zoom{cursor:zoom-in}
   <circle class="sig-dot" cx="457.6" cy="-14.2" r="4.2" fill="#f6851f"/>
 </svg></a>
     <div class="links">
-      <a href="#product">Product</a><a href="#kcomputer">K-Computer</a><a href="#voice">Voice</a><a href="#chrome">Chrome</a><a href="#built">Clients</a><a href="#academy">Academy</a><a href="#edu">Education</a><a href="#aishah">A.i.Shah</a><a href="#aim">AIM OS</a><a href="#experience">Experience</a><a href="resume.html">Résumé</a>
+      <a href="#product">Product</a><a href="#kcomputer">K-Computer</a><a href="#research">Research</a><a href="#voice">Voice</a><a href="#chrome">Chrome</a><a href="#academy">Academy</a><a href="#edu">Education</a><a href="#aishah">A.i.Shah</a><a href="#aim">AIM OS</a><a href="#experience">Experience</a><a href="resume.html">Résumé</a>
     </div>
     <a class="hire" href="mailto:hairul.azhar.ofc@gmail.com?subject=Opportunity%20for%20Hairul%20Azhar">Contact</a>
   </div>
@@ -686,9 +695,33 @@ img.zoom{cursor:zoom-in}
     </div>
   </div>
 
+  <!-- research -->
+  <div class="sec reveal" id="research">
+    <div class="sechead"><span class="secno">06</span><span class="sectitle">Research: The Harness Is the System</span></div>
+    <div class="underline"></div>
+    <p class="secintro">Deployed capability of a large language model is a property of a system, not of weights alone. My open research paper treats everything built around a pretrained model, the <b>harness</b>, as a first-class object of study: a Rust &ldquo;nervous system&rdquo; for tokenizers, data loading, serving, orchestration, gateway and agent control, and a reinforcement learning loop centred on GRPO whose heavy kernels belong in C and C++.</p>
+  </div>
+  <div class="paper reveal">
+    <a class="paper-cover" href="assets/research/Hairul_Azhar_The_Harness_Is_the_System_v1.pdf" target="_blank" rel="noopener" aria-label="Open the paper (PDF)"><img src="assets/img/paper-cover.jpg" alt="Cover of the paper: The Harness Is the System, by Hairul Azhar Bin Abu Bakar, November 2026" loading="lazy"></a>
+    <div class="panel">
+      <div class="lbl">Open community research paper &middot; v1 &middot; 20 November 2026 &middot; 34 pages</div>
+      <h4 style="margin:6px 0 4px;font-size:19px;letter-spacing:-.01em">The Harness Is the System: A Rust Nervous System and a C/C++ Reinforcement Learning Loop Around a Pretrained Brain</h4>
+      <div class="rq"><span class="lbl">Central research question</span>Can one verifiable contract across inference, trajectory provenance, reward verification and policy optimisation measurably reduce training/inference mismatch, improve reproducibility, and make long-horizon agents more reliable, for a fixed pretrained model?</div>
+      <ul class="kcl">
+        <li><b>Brain and harness, separated,</b> with reliability, provenance and verifiability as the thread through every component.</li>
+        <li><b>One trajectory contract</b>, a fixed-layout C ABI shared by serving, provenance, reward checking and training.</li>
+        <li><b>GRPO from first principles</b>, through its 2025 and 2026 variants, verifiable rewards and training/inference mismatch.</li>
+        <li><b>A discipline of falsification:</b> a minimal build target with acceptance criteria stated before any results, and a failure boundary for every recommendation.</li>
+      </ul>
+      <div class="kw" style="margin-top:10px"><span>Rust</span><span>Tokenization</span><span>PagedAttention</span><span>FlashAttention</span><span>KV cache</span><span>GRPO / DAPO / GSPO</span><span>RLVR</span><span>C ABI</span><span>SYCL &amp; WebGPU</span></div>
+      <p class="paper-note">Open draft for review, not peer reviewed. It specifies an architecture and a measurement plan; no experimental results are claimed yet. 57 numbered references.</p>
+      <div class="ctas" style="margin-top:12px"><a class="btn sm pri" href="assets/research/Hairul_Azhar_The_Harness_Is_the_System_v1.pdf" target="_blank" rel="noopener">Read the paper (PDF) &#8599;</a></div>
+    </div>
+  </div>
+
   <!-- 06 -->
   <div class="sec reveal" id="voice">
-    <div class="sechead"><span class="secno">06</span><span class="sectitle">Katalock Live and voice agents: talk to it, or let it answer your phone</span></div>
+    <div class="sechead"><span class="secno">07</span><span class="sectitle">Katalock Live and voice agents: talk to it, or let it answer your phone</span></div>
     <div class="underline"></div>
     <p class="secintro">Two ways to use Katalock out loud. <b>Katalock Live</b> is a spoken conversation with the workspace itself. <b>Voice agents</b> are AI receptionists that answer a business's own phone number and WhatsApp, book appointments and hand over to a human.</p>
   </div>
@@ -750,7 +783,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- chrome -->
   <div class="sec reveal" id="chrome">
-    <div class="sechead"><span class="secno">07</span><span class="sectitle">Katalock for Chrome: it works in your own tabs while you watch</span></div>
+    <div class="sechead"><span class="secno">08</span><span class="sectitle">Katalock for Chrome: it works in your own tabs while you watch</span></div>
     <div class="underline"></div>
     <p class="secintro">A Chrome extension that brings Katalock into the tabs you share. It reads the page, moves a visible cursor, clicks and types while you watch, checks its work with a second model, and asks before anything is sent, booked or paid. Move your mouse and it stops at once.</p>
   </div>
@@ -769,7 +802,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 04 -->
   <div class="sec reveal" id="built">
-    <div class="sechead"><span class="secno">08</span><span class="sectitle">Built with KatalockAi: real output for real clients</span></div>
+    <div class="sechead"><span class="secno">09</span><span class="sectitle">Built with KatalockAi: real output for real clients</span></div>
     <div class="underline"></div>
     <p class="secintro">The workspace is judged by what it ships. Below is <b>unedited output</b>: an AI-generated interior-staging video, and two production websites live on their own domains today.</p>
   </div>
@@ -823,7 +856,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 05 -->
   <div class="sec reveal" id="academy">
-    <div class="sechead"><span class="secno">09</span><span class="sectitle">KatalockAi Academy: the curriculum I designed</span></div>
+    <div class="sechead"><span class="secno">10</span><span class="sectitle">KatalockAi Academy: the curriculum I designed</span></div>
     <div class="underline"></div>
   </div>
   <div class="acad reveal" style="margin-top:16px">
@@ -936,7 +969,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 07 -->
   <div class="sec reveal" id="edu">
-    <div class="sechead"><span class="secno">10</span><span class="sectitle">Katalock for Education: IBTISAM teaches, students do the thinking</span></div>
+    <div class="sechead"><span class="secno">11</span><span class="sectitle">Katalock for Education: IBTISAM teaches, students do the thinking</span></div>
     <div class="underline"></div>
     <p class="secintro">AI can do homework in seconds. That's the problem: students paste the question, copy the answer and learn nothing, and teachers can't tell who really understands. So I built <b>IBTISAM</b>, an AI tutor for schools that explains, draws, quizzes and coaches, and never does the homework for them. Teachers see how well every student understands each topic.</p>
   </div>
@@ -978,7 +1011,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- aishah -->
   <div class="sec reveal" id="aishah">
-    <div class="sechead"><span class="secno">11</span><span class="sectitle">A.i.Shah: a voice-first personal assistant, made for Dubai</span></div>
+    <div class="sechead"><span class="secno">12</span><span class="sectitle">A.i.Shah: a voice-first personal assistant, made for Dubai</span></div>
     <div class="underline"></div>
     <p class="secintro"><b>A.i.Shah</b> is my entry for the Create AI Agents Championship by Dubai Chamber Digital 2026, in the Best Personal AI Agent category. You talk to it, and it does the work: email, calendar, bookings, WhatsApp, even your phone calls. It asks before anything is sent, paid or published. I built it under Katalock AI.</p>
   </div>
@@ -1007,7 +1040,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 08 -->
   <div class="sec reveal" id="aim">
-    <div class="sechead"><span class="secno">12</span><span class="sectitle">AIM OS: a governed operating system for agents</span></div>
+    <div class="sechead"><span class="secno">13</span><span class="sectitle">AIM OS: a governed operating system for agents</span></div>
     <div class="underline"></div>
   </div>
   <div class="panel reveal" style="margin-top:16px">
@@ -1026,7 +1059,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 07 -->
   <div class="sec reveal" id="experience">
-    <div class="sechead"><span class="secno">13</span><span class="sectitle">Experience: operations first, then AI</span></div>
+    <div class="sechead"><span class="secno">14</span><span class="sectitle">Experience: operations first, then AI</span></div>
     <div class="underline"></div>
   </div>
   <div class="bridge reveal">Forward-deployed work is half engineering, half operations. I spent ten years accountable for budgets, SLAs and on-site delivery before writing agents, so I build AI the way operators need it: verified, gated, and recoverable.</div>
@@ -1049,7 +1082,7 @@ img.zoom{cursor:zoom-in}
 
   <!-- 08 -->
   <div class="sec reveal">
-    <div class="sechead"><span class="secno">14</span><span class="sectitle">Stack &amp; credentials</span></div>
+    <div class="sechead"><span class="secno">15</span><span class="sectitle">Stack &amp; credentials</span></div>
     <div class="underline"></div>
   </div>
   <div class="two reveal" style="margin-top:16px">
