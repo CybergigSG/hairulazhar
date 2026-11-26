@@ -8,6 +8,7 @@
 <meta property="og:title" content="Hairul Azhar | Forward-Deployed AI Engineer">
 <meta property="og:description" content="KatalockAi workspace, a 438-lesson AI engineering Academy, IBTISAM for schools, AIM OS, and real client builds.">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hairulazhar.edgeone.dev/">
 <meta property="og:image" content="https://hairulazhar.edgeone.dev/assets/img/og-cover.jpg">
@@ -175,8 +176,14 @@ a.pill:hover{border-color:rgba(246,133,31,.5)}
 .jumpstrip a{font-size:12.5px;color:#dfe4f2;border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:rgba(255,255,255,.04)}
 .jumpstrip a:hover{border-color:rgba(246,133,31,.55);color:var(--saffron2)}
 .mapwrap{margin-top:16px;border:1px solid var(--line);border-radius:14px;background:#0e1424;padding:14px;overflow:hidden}
-.mapwrap svg{width:100%;height:auto;display:block}
+.mapwrap #v1map{width:100%;height:360px;display:block;border-radius:10px;z-index:1}
 .mapwrap .mapcap{font-size:12px;color:var(--muted);margin-top:10px}
+.mapwrap .leaflet-container{background:#0e1424;font-family:inherit}
+.mapwrap .leaflet-control-attribution{background:rgba(11,15,28,.75);color:#99a4bd;font-size:10px}
+.mapwrap .leaflet-control-attribution a{color:#c6cde0}
+.mappin{width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:2px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.5)}
+.mappin.orange{background:#f6851f}.mappin.blue{background:#5b8cff}.mappin.green{background:#2fd39a}
+.maplabel{font-size:12px;font-weight:700;color:#fff;background:rgba(11,15,28,.82);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:3px 9px;white-space:nowrap}
 
 .sec{margin-top:56px}
 .sechead{display:flex;align-items:center;gap:13px;margin-bottom:14px}
@@ -604,27 +611,7 @@ img.zoom{cursor:zoom-in}
     <div class="underline"></div>
   </div>
   <div class="mapwrap reveal">
-    <svg viewBox="0 0 920 360" role="img" aria-label="Map of launch markets: Dubai in the UAE, Bengaluru in India, Kuala Lumpur in Malaysia, Singapore, and Jakarta in Indonesia">
-      <rect x="0" y="0" width="920" height="360" rx="12" fill="#0e1424"/>
-      <g fill="#22304f" stroke="#3a4a6b" stroke-width="1">
-        <path d="M34,60 L92,68 L184,90 L218,120 L172,158 L92,165 L34,150 L23,105 Z"/>
-        <path d="M322,112 L368,135 L380,165 L426,225 L460,210 L460,172 L518,142 L564,120 L552,90 L518,75 L460,60 L402,45 L345,60 Z"/>
-        <path d="M667,165 L690,210 L724,225 L748,210 L690,165 L667,135 L656,98 L690,75 Z"/>
-        <path d="M690,240 L724,270 L736,274 L713,248 L690,225 Z"/>
-        <path d="M632,248 L667,270 L713,300 L748,322 L759,330 L736,315 L690,285 L656,262 Z"/>
-        <path d="M748,330 L805,338 L851,345 L840,352 L782,345 L748,338 Z"/>
-        <path d="M794,278 L828,255 L886,240 L908,270 L886,308 L828,315 L794,292 Z"/>
-        <path d="M460,218 L472,232 L460,240 L448,225 Z"/>
-      </g>
-      <path d="M176 96 L432 188 L710 262 L734 275 L768 332" fill="none" stroke="#f6851f" stroke-width="2" stroke-dasharray="6 6" opacity=".7"/>
-      <g font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#eaeefb">
-        <circle cx="176" cy="96" r="9" fill="#f6851f"/><circle cx="176" cy="96" r="16" fill="none" stroke="#f6851f" stroke-width="1.5" opacity=".5"/><text x="176" y="72" text-anchor="middle">Dubai, UAE</text>
-        <circle cx="432" cy="188" r="9" fill="#f6851f"/><circle cx="432" cy="188" r="16" fill="none" stroke="#f6851f" stroke-width="1.5" opacity=".5"/><text x="432" y="164" text-anchor="middle">Bengaluru, India</text>
-        <circle cx="710" cy="262" r="9" fill="#f6851f"/><circle cx="710" cy="262" r="16" fill="none" stroke="#f6851f" stroke-width="1.5" opacity=".5"/><text x="710" y="238" text-anchor="middle">Kuala Lumpur, Malaysia</text>
-        <circle cx="734" cy="275" r="9" fill="#5b8cff"/><circle cx="734" cy="275" r="16" fill="none" stroke="#5b8cff" stroke-width="1.5" opacity=".5"/><text x="734" y="306" text-anchor="middle">Singapore</text>
-        <circle cx="768" cy="332" r="9" fill="#2fd39a"/><circle cx="768" cy="332" r="16" fill="none" stroke="#2fd39a" stroke-width="1.5" opacity=".5"/><text x="820" y="352" text-anchor="middle">Jakarta, Indonesia</text>
-      </g>
-    </svg>
+    <div id="v1map" role="img" aria-label="Map of Asia and the Middle East with pins on Dubai, Bengaluru, Kuala Lumpur, Singapore and Jakarta"></div>
     <div class="mapcap">Launch markets: Singapore, India, Malaysia, Indonesia and the UAE. A.i.Shah is built for Dubai, UAE.</div>
   </div>
   <div class="markets reveal">
@@ -1290,6 +1277,27 @@ img.zoom{cursor:zoom-in}
     // Respect reduced motion for the showreel.
     if (matchMedia('(prefers-reduced-motion: reduce)').matches){ var v=document.querySelector('.showreel video'); if(v){ v.removeAttribute('autoplay'); v.pause(); } }
   });
+</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  (function(){
+    var el = document.getElementById('v1map');
+    if(!el || !window.L) return;
+    var map = L.map('v1map', {scrollWheelZoom:false, attributionControl:true}).setView([15, 85], 3);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {maxZoom: 19, attribution: '&copy; OpenStreetMap contributors &copy; CARTO'}).addTo(map);
+    var pins = [
+      [25.2, 55.3, 'Dubai, UAE', 'orange'],
+      [13.0, 77.6, 'Bengaluru, India', 'orange'],
+      [3.1, 101.7, 'Kuala Lumpur, Malaysia', 'orange'],
+      [1.35, 103.8, 'Singapore', 'blue'],
+      [-6.2, 106.8, 'Jakarta, Indonesia', 'green']
+    ];
+    pins.forEach(function(p){
+      var icon = L.divIcon({className:'', html:'<div class="mappin '+p[3]+'"></div>', iconSize:[22,22], iconAnchor:[11,22]});
+      L.marker([p[0], p[1]], {icon: icon}).addTo(map);
+      L.marker([p[0], p[1]], {icon: L.divIcon({className:'', html:'<div class="maplabel">'+p[2]+'</div>', iconSize:[0,0], iconAnchor:[-14,-28]})}).addTo(map);
+    });
+  })();
 </script>
 </body>
 </html>
